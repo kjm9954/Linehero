@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Attack : MonoBehaviour, IPointerClickHandler
 {
     public bool attack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Attack : MonoBehaviour, IPointerClickHandler
     {
         attack = true;
         Debug.Log("Button");
+
     }
 
 }
