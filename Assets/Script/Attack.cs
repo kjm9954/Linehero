@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Attack : MonoBehaviour, IPointerClickHandler
-{
+public class Attack : MonoBehaviour {
+
     public bool attack;
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,6 @@ public class Attack : MonoBehaviour, IPointerClickHandler
         
     }
 
-  
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        attack = true;
-        Debug.Log("Button");
-    }
+    
 
 }

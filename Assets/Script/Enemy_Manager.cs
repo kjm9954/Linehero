@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class Enemy_Manager: MonoBehaviour
 {
-    public bool enableSpawn = false;
-    public bool upSpawn = false;
-    public bool downSpawn = false;
-    public bool leftSpawn = false;
-    public bool rightSpawn = false;
+    [SerializeField] private bool enableSpawn = true;
+    private bool upSpawn = false;
+    private bool downSpawn = false;
+    private bool leftSpawn = true;
+    private bool rightSpawn = false;
     public GameObject Enemy;
     private GameObject enemy;
     private GameObject leftenemy;
@@ -30,13 +30,13 @@ public class Enemy_Manager: MonoBehaviour
             }
             if (downSpawn) 
             {
-                enemy = (GameObject)Instantiate(Enemy, new Vector3(320, -30, -5), Quaternion.identity);
+                enemy = (GameObject)Instantiate(Enemy, new Vector3(0f, -7.5f, -5f), Quaternion.identity);
                 enemy.name = "Enemy";
                 Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
             }
             if (leftSpawn) 
             {
-                leftenemy = (GameObject)Instantiate(Enemy, new Vector3(-30, 700, -5), Quaternion.identity);
+                leftenemy = (GameObject)Instantiate(Enemy, new Vector3(-4f, 0f, -5f), Quaternion.identity);
                 leftenemy.name = "Enemy";
                 Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
             }

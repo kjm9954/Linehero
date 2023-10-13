@@ -16,13 +16,13 @@ public class Enemy_Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (move.transform.position.x >= 320 && move.transform.position.y >= 1300)
+        if (move.transform.position.x >= 0f && move.transform.position.y >= 7.5f)
             dir.y = -1;
-        if (move.transform.position.x >= 320 && move.transform.position.y <= 0)
+        if (move.transform.position.x >= 0f && move.transform.position.y <= -7.5f)
             dir.y = 1;
-        if (move.transform.position.x >= 640 && move.transform.position.y <= 700)
+        if (move.transform.position.x >= 4f && move.transform.position.y <= 0f)
             dir.x = -1;
-        if (move.transform.position.x <= 0 && move.transform.position.y <= 700)
+        if (move.transform.position.x <= -4f && move.transform.position.y <= -0f)
             dir.x = 1;
         move.transform.position += dir * speed * Time.deltaTime;
     }
