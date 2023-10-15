@@ -6,7 +6,7 @@ using UnityEngine;
 public class LineManager : MonoBehaviour
 {
     public GameObject attack;
-    public bool monsterAttack;
+    public bool InLine;
     void Start()
     {
        
@@ -17,23 +17,30 @@ public class LineManager : MonoBehaviour
     {
         
     }
+
+   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        bool isLeftEnemy = collision.gameObject.CompareTag("LeftEnemy");
+        bool isRightEnemy = collision.gameObject.CompareTag("RightEnemy");
+        bool isUpEnemy = collision.gameObject.CompareTag("UpEnemy");
+        bool isDownEnemy = collision.gameObject.CompareTag("DownEnemy");
+        if (isLeftEnemy || isDownEnemy || isRightEnemy || isUpEnemy)
+        {
+            InLine = true;
+        }
     }
 
-
-    private void OnTriggerStay2D(UnityEngine.Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        bool isEnemy = collision.gameObject.CompareTag("Enemy");
-        if (isEnemy)
+        bool isLeftEnemy = collision.gameObject.CompareTag("LeftEnemy");
+        bool isRightEnemy = collision.gameObject.CompareTag("RightEnemy");
+        bool isUpEnemy = collision.gameObject.CompareTag("UpEnemy");
+        bool isDownEnemy = collision.gameObject.CompareTag("DownEnemy");
+        if (isLeftEnemy || isDownEnemy || isRightEnemy || isUpEnemy)
         {
-            if (attack.GetComponent<Attack>().attack)
-            {
-                Debug.Log("Attack");
-                attack.GetComponent<Attack>().attack = false;
-                monsterAttack = true;
-            }
+            InLine = false;
         }
     }
 }

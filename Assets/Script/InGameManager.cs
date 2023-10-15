@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InGameManager : BaseUi
 {
+    public GameObject AttackButton;
     protected override void Awake()
     {
         base.Awake();
@@ -22,7 +23,8 @@ public class InGameManager : BaseUi
         {
             case "AttackBtn":
                 {
-
+                    AttackButton.GetComponent<AttackBtn>().DesMonster();
+                    Debug.Log("Button");
                 }
                 break;
         }

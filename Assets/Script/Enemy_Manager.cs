@@ -8,16 +8,12 @@ public class Enemy_Manager: MonoBehaviour
 {
     [SerializeField] private bool enableSpawn = true;
     private bool upSpawn = false;
-    private bool downSpawn = false;
+    private bool downSpawn = true;
     private bool leftSpawn = true;
     private bool rightSpawn = false;
     public GameObject Enemy;
     private GameObject enemy;
     private GameObject leftenemy;
-    public GameObject lineup;
-    public GameObject lineleft;
-    public GameObject linedown;
-    public GameObject lineright;
     // Start is called before the first frame update
 
     void SpawnEnemies()
@@ -31,13 +27,13 @@ public class Enemy_Manager: MonoBehaviour
             if (downSpawn) 
             {
                 enemy = (GameObject)Instantiate(Enemy, new Vector3(0f, -7.5f, -5f), Quaternion.identity);
-                enemy.name = "Enemy";
+                enemy.tag = "DownEnemy";
                 Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
             }
             if (leftSpawn) 
             {
                 leftenemy = (GameObject)Instantiate(Enemy, new Vector3(-4f, 0f, -5f), Quaternion.identity);
-                leftenemy.name = "Enemy";
+                leftenemy.tag = "LeftEnemy";
                 Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
             }
             if (rightSpawn)
@@ -59,27 +55,7 @@ public class Enemy_Manager: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lineup.GetComponent<LineManager>().monsterAttack)
-        {
-            Destroy(enemy.gameObject);
-            lineup.GetComponent<LineManager>().monsterAttack = false;
-        }
-        if (lineleft.GetComponent<LineManager>().monsterAttack)
-        {
-            Destroy(leftenemy.gameObject);
-            lineleft.GetComponent<LineManager>().monsterAttack = false;
-        }
-        if (linedown.GetComponent<LineManager>().monsterAttack)
-        {
-            Debug.Log("down");
-            Destroy(enemy.gameObject);
-            linedown.GetComponent<LineManager>().monsterAttack = false;
-        }
-        if (lineright.GetComponent<LineManager>().monsterAttack)
-        {
-            Destroy(enemy.gameObject);
-            lineright.GetComponent<LineManager>().monsterAttack = false;
-        }
+        
     }
 
     

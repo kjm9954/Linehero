@@ -7,7 +7,7 @@ using UnityEngine;
 public class Monster_Destroy : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public bool InLine;
     
     private void Start()
     {
@@ -26,8 +26,16 @@ public class Monster_Destroy : MonoBehaviour
         if (isPlayer)
         {
             Destroy(gameObject);
+
         }
+        
+
     }
-   
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+       
+    }
+
 
 }

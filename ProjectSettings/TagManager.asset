@@ -7,6 +7,12 @@ TagManager:
   - Enemy
   - Attack
   - BackGround
+  - Line
+  - LeftEnemy
+  - DownEnemy
+  - RightEnemy
+  - UpEnemy
+  - Hp
   layers:
   - Default
   - TransparentFX
