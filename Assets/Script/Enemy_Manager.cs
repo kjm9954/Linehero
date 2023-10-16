@@ -70,8 +70,14 @@ public class Enemy_Manager: MonoBehaviour
                     SpawnLeft();
                     break;
             }
-            i++;
-
+            if (i < spawnpoint.Length - 1)
+            {
+                i++;
+            }
+            else if (i == spawnpoint.Length - 1)
+            {
+                spawnpoint[i] = 4;
+            }
             time = 0;
         }
         

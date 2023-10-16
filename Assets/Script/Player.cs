@@ -5,20 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private int hp;
+
     public GameObject lefthp;
     public GameObject centerhp;
     public GameObject righthp;
+    public GameObject over;
+    public GameObject Gauge;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,14 +32,18 @@ public class Player : MonoBehaviour
         if (hp == 2)
         {
             Destroy(righthp.gameObject);
+            Gauge.GetComponent<InGameManager>().MonsterNum--;
         }
         else if (hp == 1) 
         {
             Destroy(centerhp.gameObject);
+            Gauge.GetComponent<InGameManager>().MonsterNum--;
         }
         else if (hp == 0)
         {
             Destroy(lefthp.gameObject);
+            Time.timeScale = 0;
+            over.GetComponent<GameOver>().show();
         }
     }
 }

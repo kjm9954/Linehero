@@ -8,18 +8,6 @@ public class Monster_Destroy : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool InLine;
-    
-    private void Start()
-    {
-    }
-    private void Update()
-    {
-        
-    }
-    public void des()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool isPlayer = collision.gameObject.CompareTag("Player");
@@ -30,11 +18,6 @@ public class Monster_Destroy : MonoBehaviour
         }
         
 
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-       
     }
 
 

@@ -10,6 +10,7 @@ public class AttackBtn : MonoBehaviour
     public GameObject downline;
     public GameObject Mon;
     public GameObject InGame;
+    public GameObject Clear;
     public bool Des;
     
 
@@ -23,21 +24,38 @@ public class AttackBtn : MonoBehaviour
         {
             Destroy(GameObject.FindWithTag("LeftEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
+            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
+            {
+                Clear.GetComponent<GameClear>().show();
+            }
         }
         if (rightline.GetComponent<LineManager>().InLine)
         {
             Destroy(GameObject.FindWithTag("RightEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
+            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
+            {
+                Clear.GetComponent<GameClear>().show();
+            }
         }
         if (upline.GetComponent<LineManager>().InLine)
         {
             Destroy(GameObject.FindWithTag("UpEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
+            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
+            {
+                Clear.GetComponent<GameClear>().show();
+            }
         }
         if (downline.GetComponent<LineManager>().InLine)
         {
             Destroy(GameObject.FindWithTag("DownEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
+            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
+            {
+                Clear.GetComponent<GameClear>().show();
+            }
         }
+        
     }
 }
