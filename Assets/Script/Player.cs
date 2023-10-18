@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Player : MonoBehaviour
     public GameObject centerhp;
     public GameObject righthp;
     public GameObject over;
-    public GameObject Gauge;
+    public GameObject Monster;
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,12 +33,16 @@ public class Player : MonoBehaviour
         if (hp == 2)
         {
             Destroy(righthp.gameObject);
-            Gauge.GetComponent<InGameManager>().MonsterNum--;
+            int pos = UnityEngine.Random.Range(0, 3);
+            Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
+            Monster.GetComponent<Enemy_Manager>().spawnpoint[Monster.GetComponent<Enemy_Manager>().spawnpoint.Length - 1] = pos;
         }
         else if (hp == 1) 
         {
             Destroy(centerhp.gameObject);
-            Gauge.GetComponent<InGameManager>().MonsterNum--;
+            int pos = UnityEngine.Random.Range(0, 3);
+            Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
+            Monster.GetComponent<Enemy_Manager>().spawnpoint[Monster.GetComponent<Enemy_Manager>().spawnpoint.Length - 1] = pos;
         }
         else if (hp == 0)
         {

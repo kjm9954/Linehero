@@ -9,10 +9,12 @@ public class InGameManager : BaseUi
     public GameObject Over;
     public GameObject Clear;
     public float MonsterNum;
+    public float MonsterLength;
     protected override void Awake()
     {
         base.Awake();
         MonsterNum = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
+        MonsterLength = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
     }
 
     protected override void Start()
@@ -22,7 +24,7 @@ public class InGameManager : BaseUi
     }
     private void Update()
     {
-        imgs[0].fillAmount = MonsterNum / Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
+        imgs[0].fillAmount = MonsterNum / MonsterLength;
     }
 
     protected override void ButtonFuncion(string btnname)
