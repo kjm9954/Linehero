@@ -11,13 +11,7 @@ public class AttackBtn : MonoBehaviour
     public GameObject Mon;
     public GameObject InGame;
     public GameObject Clear;
-    public bool Des;
-    
 
-    private void Awake()
-    {
-        
-    }
     public void DesMonster()
     {
         if(leftline.GetComponent<LineManager>().InLine)
