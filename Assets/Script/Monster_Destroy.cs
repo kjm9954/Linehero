@@ -17,7 +17,6 @@ public class Monster_Destroy : MonoBehaviour
 
         }
         
-
     }
 
 
