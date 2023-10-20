@@ -18,38 +18,34 @@ public class AttackBtn : MonoBehaviour
         {
             Destroy(GameObject.FindWithTag("LeftEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
-            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
-            {
-                Clear.GetComponent<GameClear>().show();
-            }
+            ClearStage();
         }
         if (rightline.GetComponent<LineManager>().InLine)
         {
             Destroy(GameObject.FindWithTag("RightEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
-            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
-            {
-                Clear.GetComponent<GameClear>().show();
-            }
+            ClearStage();
         }
         if (upline.GetComponent<LineManager>().InLine)
         {
             Destroy(GameObject.FindWithTag("UpEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
-            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
-            {
-                Clear.GetComponent<GameClear>().show();
-            }
+            ClearStage();
         }
         if (downline.GetComponent<LineManager>().InLine)
         {
             Destroy(GameObject.FindWithTag("DownEnemy"));
             InGame.GetComponent<InGameManager>().MonsterNum--;
-            if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
-            {
-                Clear.GetComponent<GameClear>().show();
-            }
+            ClearStage();
         }
         
+    }
+    
+    void ClearStage()
+    {
+        if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
+        {
+            Clear.GetComponent<GameClear>().show();
+        }
     }
 }
