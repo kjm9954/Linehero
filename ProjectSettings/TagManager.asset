@@ -13,6 +13,10 @@ TagManager:
   - RightEnemy
   - UpEnemy
   - Hp
+  - LeftEnemy2
+  - DownEnemy2
+  - RightEnemy2
+  - UpEnemy2
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Monster_Destroy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool InLine;
+    public int hp;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool isPlayer = collision.gameObject.CompareTag("Player");
@@ -16,8 +16,5 @@ public class Monster_Destroy : MonoBehaviour
             Destroy(gameObject);
 
         }
-        
     }
-
-
 }
