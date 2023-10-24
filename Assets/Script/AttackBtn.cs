@@ -15,6 +15,7 @@ public class AttackBtn : MonoBehaviour
     public GameObject InGame;
     public GameObject Clear;
     public GameObject skill;
+    public GameObject Camera;
     public float wating = 0;
     GameObject Left = null;
     GameObject Right = null;
@@ -58,6 +59,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
+            Camera.GetComponent<CameraShake>().C_Shake();
             skill.GetComponent<Animation>().OnSkill();
             ClearStage();
         }
@@ -81,6 +83,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
+            Camera.GetComponent<CameraShake>().C_Shake();
             skill.GetComponent<Animation>().OnSkill();
             ClearStage();
         }
@@ -104,6 +107,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
+            Camera.GetComponent<CameraShake>().C_Shake();
             skill.GetComponent<Animation>().OnSkill();
             ClearStage();
         }
@@ -127,6 +131,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
+            Camera.GetComponent<CameraShake>().C_Shake();
             skill.GetComponent<Animation>().OnSkill();
             ClearStage();
         }

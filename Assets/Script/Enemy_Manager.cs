@@ -16,7 +16,7 @@ public class Enemy_Manager: MonoBehaviour
     public float wating;
     private float time;
     public string[] spawnpoint;
-    public int i = 0;
+    private int i = 0;
  
     
     // Start is called before the first frame update
