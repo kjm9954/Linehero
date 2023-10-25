@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Move : Enemy_Manager
+public class Enemy_Move : MonoBehaviour
 {
     
     public GameObject move;
-    public Rigidbody2D rb;
     public bool Hit = false;
+    public float speed;
+    Vector3 dir;
     // Start is called before the first frame update
 
     private void Start()
     {
         Hit = false;
-        rb = GetComponent<Rigidbody2D>();
         MonMove();
     }
     // Update is called once per frame

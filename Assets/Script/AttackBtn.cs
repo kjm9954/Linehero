@@ -135,11 +135,11 @@ public class AttackBtn : MonoBehaviour
     {
         Clear.GetComponent<GameClear>().show();
     }
-    void OnBtn()
+    public void OnBtn()
     {
         gameObject.GetComponent<Button>().interactable = true;
     }
-    void OffBtn()
+    public void OffBtn()
     {
         gameObject.GetComponent<Button>().interactable = false;
     }

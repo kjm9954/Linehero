@@ -17,8 +17,7 @@ public class Enemy_Manager: MonoBehaviour
     private float time;
     public string[] spawnpoint;
     private int i = 0;
-    public float speed;
-    public Vector3 dir;
+
 
     // Start is called before the first frame update
 
@@ -156,12 +155,6 @@ public class Enemy_Manager: MonoBehaviour
                 spawnpoint[spawnpoint.Length - 1] = "2right";
                 break;
         }
-    }
-
-    public void EnemyStop()
-    {
-        dir.x = 0;
-        dir.y = 0;
     }
     public void DamageUpMonster()
     {
