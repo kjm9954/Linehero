@@ -1,6 +1,9 @@
+using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,19 +15,39 @@ public class Player : MonoBehaviour
     public GameObject righthp;
     public GameObject over;
     public GameObject Monster;
+    public GameObject Hit;
+    public GameObject bt;
+    public GameObject resultime;
+    SkeletonAnimation spn;
+    float time;
     // Start is called before the first frame update
 
+    private void Start()
+    {
+       spn = GetComponent<SkeletonAnimation>();
+    }
+    private void Update()
+    {
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool isLeftEnemy = collision.gameObject.CompareTag("LeftEnemy");
         bool isRightEnemy = collision.gameObject.CompareTag("RightEnemy");
         bool isUpEnemy = collision.gameObject.CompareTag("UpEnemy");
         bool isDownEnemy = collision.gameObject.CompareTag("DownEnemy");
-        if (isLeftEnemy || isDownEnemy || isRightEnemy || isUpEnemy)
+        bool isLeftEnemy_hp2 = collision.gameObject.CompareTag("LeftEnemy2");
+        bool isRightEnemy_hp2 = collision.gameObject.CompareTag("RightEnemy2");
+        bool isUpEnemy_hp2 = collision.gameObject.CompareTag("UpEnemy2");
+        bool isDownEnemy_hp2 = collision.gameObject.CompareTag("DownEnemy2");
+        if (isLeftEnemy || isDownEnemy || isRightEnemy || isUpEnemy ||
+            isLeftEnemy_hp2 || isRightEnemy_hp2 || isUpEnemy_hp2 || isDownEnemy_hp2)
         {
             Debug.Log("Enemy");
             hp--;
             Damage();
+            Hit.GetComponent<Animation>().OnSkill();
+            
         }
     }
 
@@ -33,22 +56,36 @@ public class Player : MonoBehaviour
         if (hp == 2)
         {
             Destroy(righthp.gameObject);
-            int pos = UnityEngine.Random.Range(0, 3);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
-            Monster.GetComponent<Enemy_Manager>().spawnpoint[Monster.GetComponent<Enemy_Manager>().spawnpoint.Length - 1] = pos;
+            Monster.GetComponent<Enemy_Manager>().randomMon();
+            spn.AnimationState.SetAnimation(0, "hit", false);
+            Invoke("Idle", 1f);
         }
         else if (hp == 1) 
         {
             Destroy(centerhp.gameObject);
-            int pos = UnityEngine.Random.Range(0, 3);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
-            Monster.GetComponent<Enemy_Manager>().spawnpoint[Monster.GetComponent<Enemy_Manager>().spawnpoint.Length - 1] = pos;
+            Monster.GetComponent<Enemy_Manager>().randomMon();
+            spn.AnimationState.SetAnimation(0, "hit", false);
+            Invoke("Idle", 1f);
         }
         else if (hp == 0)
         {
             Destroy(lefthp.gameObject);
-            Time.timeScale = 0;
-            over.GetComponent<GameOver>().show();
+            spn.AnimationState.SetAnimation(0, "die", false);
+            bt.GetComponent<AttackBtn>().OffBtn();
+            Invoke("Over", resultime.GetComponent<Result>().FailedTime);
         }
+    }
+
+    void Idle()
+    {
+        spn.AnimationState.SetAnimation(0, "Idle", true);
+    }
+
+    void Over()
+    {
+        over.GetComponent<GameOver>().show();
+        Time.timeScale = 0f;
     }
 }

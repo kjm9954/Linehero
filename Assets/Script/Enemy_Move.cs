@@ -4,22 +4,81 @@ using UnityEngine;
 
 public class Enemy_Move : MonoBehaviour
 {
-    private Vector3 dir;
+    
     public GameObject move;
-    [SerializeField] private float speed;
+    public bool Hit = false;
+    public float speed;
+    Vector3 dir;
     // Start is called before the first frame update
 
+    private void Start()
+    {
+        Hit = false;
+        MonMove();
+    }
     // Update is called once per frame
     void Update()
     {
-        if (move.transform.position.x >= 0f && move.transform.position.y >= 7.5f)
+        if (Hit == true)
+        {
+            if (move.transform.position.x <= 0f && move.transform.position.y >= 0.5f)
+            {
+                dir.y = 10;
+            }
+            if (move.transform.position.x <= 0f && move.transform.position.y <= -0.5f)
+            {
+                dir.y = -10;
+            }
+            if (move.transform.position.x >= 0.5f && move.transform.position.y <= 0f)
+            {
+                dir.x = 10;
+            }
+            if (move.transform.position.x <= -0.5f && move.transform.position.y <= 0f)
+            {
+                dir.x = -10;
+            }
+            Debug.Log("Hit");
+            Hit = false;
+            Invoke("MonMove", 0.1f);
+        }
+        transform.position += dir * speed * Time.deltaTime;
+    }
+
+    void MonMove()
+    {
+        if (move.transform.position.x <= 0f && move.transform.position.y >= 0.5f)
+        {
             dir.y = -1;
-        if (move.transform.position.x >= 0f && move.transform.position.y <= -7.5f)
-            dir.y = 1;
-        if (move.transform.position.x >= 4f && move.transform.position.y <= 0f)
+        }
+        if (move.transform.position.x <= 0f && move.transform.position.y <= -0.5f)
+        {
+            dir.y = 1;   
+        }
+        if (move.transform.position.x >= 0.5f && move.transform.position.y <= 0f)
+        {
             dir.x = -1;
-        if (move.transform.position.x <= -4f && move.transform.position.y <= -0f)
+        }
+        if (move.transform.position.x <= -0.5f && move.transform.position.y <= 0f)
+        {
             dir.x = 1;
-        move.transform.position += dir * speed * Time.deltaTime;
+        }
+        
+    }
+    public void MonStop()
+    {
+        dir.x = 0;
+        dir.y = 0;
+    }
+    public void Back()
+    {
+        Debug.Log("Back");
+        Hit = true;
+        //rb.AddForce(new Vector2(-speed * 2, 0f));
+        //Invoke("OffBack", 1f);
+    }
+
+    void OffBack()
+    {
+        MonMove();
     }
 }
