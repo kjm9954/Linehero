@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject Monster;
     public GameObject Hit;
     public GameObject bt;
+    public GameObject resultime;
     SkeletonAnimation spn;
     float time;
     // Start is called before the first frame update
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
             Destroy(lefthp.gameObject);
             spn.AnimationState.SetAnimation(0, "die", false);
             bt.GetComponent<AttackBtn>().OffBtn();
-            Invoke("Over", 1.8f);
+            Invoke("Over", resultime.GetComponent<Result>().FailedTime);
         }
     }
 
