@@ -17,8 +17,9 @@ public class Enemy_Manager: MonoBehaviour
     private float time;
     public string[] spawnpoint;
     private int i = 0;
- 
-    
+    public float speed;
+    public Vector3 dir;
+
     // Start is called before the first frame update
 
     void SpawnUp()
@@ -48,14 +49,12 @@ public class Enemy_Manager: MonoBehaviour
     }
     void SpawnUp_2Hp()
     {
-        Enemy_2Hp.GetComponent<Monster_Destroy>().hp = 2;
         upenemy = (GameObject)Instantiate(Enemy_2Hp, new Vector3(0f, 7.5f, 1f), Quaternion.identity);
         upenemy.tag = "UpEnemy2";
         Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
     }
     void SpawnDown_2Hp()
     {
-        Enemy_2Hp.GetComponent<Monster_Destroy>().hp = 2;
         enemy = (GameObject)Instantiate(Enemy_2Hp, new Vector3(0f, -7.5f, 1f), Quaternion.identity);
         enemy.tag = "DownEnemy2";
         Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
@@ -68,7 +67,7 @@ public class Enemy_Manager: MonoBehaviour
     }
     void SpawnRight_2Hp()
     {
-        Enemy_2Hp.GetComponent<Monster_Destroy>().hp = 2;
+
         rightenemy = (GameObject)Instantiate(Enemy_2Hp, new Vector3(4f, 0f, 1f), Quaternion.identity);
         rightenemy.tag = "RightEnemy2";
         Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
@@ -159,6 +158,11 @@ public class Enemy_Manager: MonoBehaviour
         }
     }
 
+    public void EnemyStop()
+    {
+        dir.x = 0;
+        dir.y = 0;
+    }
     public void DamageUpMonster()
     {
         GameObject Mon2 = GameObject.FindWithTag("UpEnemy2");

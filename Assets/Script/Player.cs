@@ -1,6 +1,8 @@
+using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -14,8 +16,18 @@ public class Player : MonoBehaviour
     public GameObject over;
     public GameObject Monster;
     public GameObject Hit;
+    SkeletonAnimation spn;
+    float time;
     // Start is called before the first frame update
 
+    private void Start()
+    {
+       spn = GetComponent<SkeletonAnimation>();
+    }
+    private void Update()
+    {
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool isLeftEnemy = collision.gameObject.CompareTag("LeftEnemy");
@@ -33,6 +45,7 @@ public class Player : MonoBehaviour
             hp--;
             Damage();
             Hit.GetComponent<Animation>().OnSkill();
+            
         }
     }
 
@@ -43,20 +56,34 @@ public class Player : MonoBehaviour
             Destroy(righthp.gameObject);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
             Monster.GetComponent<Enemy_Manager>().randomMon();
+            spn.AnimationState.SetAnimation(0, "hit", false);
+            Invoke("Idle", 1f);
         }
         else if (hp == 1) 
         {
             Destroy(centerhp.gameObject);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
             Monster.GetComponent<Enemy_Manager>().randomMon();
+            spn.AnimationState.SetAnimation(0, "hit", false);
+            Invoke("Idle", 1f);
         }
         else if (hp == 0)
         {
             Destroy(lefthp.gameObject);
-            Time.timeScale = 0;
-            over.GetComponent<GameOver>().show();
+            spn.AnimationState.SetAnimation(0, "die", false);
+            Monster.GetComponent<Enemy_Manager>().EnemyStop();
+            Invoke("Over", 1.8f);
         }
     }
 
+    void Idle()
+    {
+        spn.AnimationState.SetAnimation(0, "Idle", true);
+    }
 
+    void Over()
+    {
+        over.GetComponent<GameOver>().show();
+        Time.timeScale = 0f;
+    }
 }

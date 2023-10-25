@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Move : MonoBehaviour
+public class Enemy_Move : Enemy_Manager
 {
-    public Vector3 dir;
+    
     public GameObject move;
     public Rigidbody2D rb;
-    [SerializeField] private float speed;
     public bool Hit = false;
     // Start is called before the first frame update
 
@@ -64,6 +63,11 @@ public class Enemy_Move : MonoBehaviour
             dir.x = 1;
         }
         
+    }
+    public void MonStop()
+    {
+        dir.x = 0;
+        dir.y = 0;
     }
     public void Back()
     {

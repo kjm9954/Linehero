@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class AttackBtn : MonoBehaviour
     public GameObject Clear;
     public GameObject skill;
     public GameObject Camera;
+    public GameObject spn;
     public float wating = 0;
     GameObject Left = null;
     GameObject Right = null;
@@ -59,9 +61,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
-            Camera.GetComponent<CameraShake>().C_Shake();
-            skill.GetComponent<Animation>().OnSkill();
-            ClearStage();
+            attck();
         }
         if (rightline.GetComponent<LineManager>().InLine)
         {
@@ -83,9 +83,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
-            Camera.GetComponent<CameraShake>().C_Shake();
-            skill.GetComponent<Animation>().OnSkill();
-            ClearStage();
+            attck();
         }
         if (upline.GetComponent<LineManager>().InLine)
         {
@@ -107,9 +105,7 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
-            Camera.GetComponent<CameraShake>().C_Shake();
-            skill.GetComponent<Animation>().OnSkill();
-            ClearStage();
+            attck();
         }
         if (downline.GetComponent<LineManager>().InLine)
         {
@@ -131,24 +127,14 @@ public class AttackBtn : MonoBehaviour
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
-            Camera.GetComponent<CameraShake>().C_Shake();
-            skill.GetComponent<Animation>().OnSkill();
-            ClearStage();
+            attck();
         }
-
-        
-
-
     }
 
     void ClearStage()
     {
-        if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
-        {
-            Clear.GetComponent<GameClear>().show();
-        }
+        Clear.GetComponent<GameClear>().show();
     }
-
     void OnBtn()
     {
         gameObject.GetComponent<Button>().interactable = true;
@@ -156,5 +142,25 @@ public class AttackBtn : MonoBehaviour
     void OffBtn()
     {
         gameObject.GetComponent<Button>().interactable = false;
+    }
+    void attck()
+    {
+        spn.GetComponent<SpineAnimation>().Attack();
+        Invoke("Idle", 0.6f);
+        Camera.GetComponent<CameraShake>().C_Shake();
+        skill.GetComponent<Animation>().OnSkill();
+        ClearAnimation();
+    }
+    void Idle()
+    {
+        spn.GetComponent<SpineAnimation>().Idle();
+    }
+    void ClearAnimation()
+    {
+        if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
+        {
+            spn.GetComponent<SpineAnimation>().Clear();
+            Invoke("ClearStage",0.8f);
+        }
     }
 }
