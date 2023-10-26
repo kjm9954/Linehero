@@ -33,6 +33,7 @@ public class SpineAnimation : MonoBehaviour
     }
     public void Clear()
     {
-        spn.AnimationState.SetAnimation(0, "victory_after", false);
+        spn.AnimationState.SetAnimation(1, "victory", false);
+        spn.AnimationState.AddAnimation(2, "victory_after", false, 1f);
     }
 }
