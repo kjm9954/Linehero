@@ -53,6 +53,16 @@ public class InGameManager : BaseUi
                     Clear.GetComponent<GameClear>().OnClick_Retry();
                 }
                 break;
+            case "Over_Back":
+                {
+                    Over.GetComponent<GameOver>().OnClick_Back();
+                }
+                break;
+            case "Clear_Back":
+                {
+                    Clear.GetComponent<GameClear>().OnClick_Back();
+                }
+                break;
         }
     }
 
