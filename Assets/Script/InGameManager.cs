@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InGameManager : BaseUi
 {
@@ -53,6 +55,31 @@ public class InGameManager : BaseUi
                     Clear.GetComponent<GameClear>().OnClick_Retry();
                 }
                 break;
+            case "Over_Back":
+                {
+                    Over.GetComponent<GameOver>().OnClick_Back();
+                }
+                break;
+            case "Clear_Back":
+                {
+                    Clear.GetComponent<GameClear>().OnClick_Back();
+                }
+                break;
+            case "Start":
+                {
+                    SceneManager.LoadScene("Stage_Select");
+                }
+                break;
+            case "Setting":
+                {
+
+                }
+                break;
+            case "GameEnd":
+                {
+                    Application.Quit();
+                }
+                    break;
         }
     }
 

@@ -27,6 +27,6 @@ public class GameOver : MonoBehaviour
 
     public void OnClick_Back()
     {
-
+        SceneManager.LoadScene("Stage_Select");
     }
 }

@@ -20,5 +20,10 @@ public class GameClear : MonoBehaviour
     public void OnClick_Retry()
     {
         SceneManager.LoadScene("Stage1");
+
+    }
+    public void OnClick_Back()
+    {
+        SceneManager.LoadScene("Stage_Select");
     }
 }

@@ -19,6 +19,8 @@ public class AttackBtn : MonoBehaviour
     public GameObject Camera;
     public GameObject spn;
     public GameObject resultime;
+    public GameObject Stage;
+    public GameObject Back;
     public float wating = 0;
     GameObject Left = null;
     GameObject Right = null;
@@ -161,6 +163,8 @@ public class AttackBtn : MonoBehaviour
         if (InGame.GetComponent<InGameManager>().MonsterNum == 0)
         {
             spn.GetComponent<SpineAnimation>().Clear();
+            Back.GetComponent<Fade>().ShowBack();
+            Stage.GetComponent<Stage_Clear>().Stage();
             Invoke("ClearStage", resultime.GetComponent<Result>().ClearTime);
         }
     }

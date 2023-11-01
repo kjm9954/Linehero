@@ -1,10 +1,9 @@
+
 using Spine.Unity;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+
+
 
 public class Player : MonoBehaviour
 {
@@ -18,12 +17,14 @@ public class Player : MonoBehaviour
     public GameObject Hit;
     public GameObject bt;
     public GameObject resultime;
+    public GameObject BackGround;
     SkeletonAnimation spn;
     float time;
     // Start is called before the first frame update
 
     private void Start()
     {
+
        spn = GetComponent<SkeletonAnimation>();
     }
     private void Update()
@@ -73,6 +74,7 @@ public class Player : MonoBehaviour
         {
             Destroy(lefthp.gameObject);
             spn.AnimationState.SetAnimation(0, "die", false);
+            BackGround.GetComponent<Fade>().ShowBack();
             bt.GetComponent<AttackBtn>().OffBtn();
             Invoke("Over", resultime.GetComponent<Result>().FailedTime);
         }
