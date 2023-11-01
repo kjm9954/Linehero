@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 60;
+
        spn = GetComponent<SkeletonAnimation>();
     }
     private void Update()
