@@ -154,14 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 5235909051058993170, guid: 86e5bbd47aeebdc45adf16d57df6f5a7, type: 3}
   Enemy_2Hp: {fileID: 2280485133277500938, guid: d67af611fd8a7964399dc9c0cafb3269, type: 3}
+  Enemy_3Hp: {fileID: 2280485133277500938, guid: cbe057bb8639a4a46b5118a4aec3b5dc, type: 3}
   wating: 3
   spawnpoint:
   - 2down
   - left
-  - 2left
-  - right
-  - 2up
-  - 2up
+  - 3up
 --- !u!4 &92929383
 Transform:
   m_ObjectHideFlags: 0
@@ -860,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &539675781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1563,8 +1561,6 @@ MonoBehaviour:
   rightline: {fileID: 211099532}
   upline: {fileID: 420649375}
   downline: {fileID: 1343680060}
-  Mon: {fileID: 5235909051058993170, guid: 86e5bbd47aeebdc45adf16d57df6f5a7, type: 3}
-  Mon_Hp2: {fileID: 2280485133277500938, guid: d67af611fd8a7964399dc9c0cafb3269, type: 3}
   MonManager: {fileID: 92929381}
   InGame: {fileID: 2010549462}
   Clear: {fileID: 539675780}
@@ -1827,7 +1823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1281467108
 RectTransform:
   m_ObjectHideFlags: 0

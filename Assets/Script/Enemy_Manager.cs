@@ -9,6 +9,7 @@ public class Enemy_Manager: MonoBehaviour
 {
     public GameObject Enemy;
     public GameObject Enemy_2Hp;
+    public GameObject Enemy_3Hp;
     private GameObject enemy;
     private GameObject leftenemy;
     private GameObject rightenemy;
@@ -71,6 +72,31 @@ public class Enemy_Manager: MonoBehaviour
         rightenemy.tag = "RightEnemy2";
         Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
     }
+    void SpawnUp_3Hp()
+    {
+        upenemy = (GameObject)Instantiate(Enemy_3Hp, new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        upenemy.tag = "UpEnemy2";
+        Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
+    }
+    void SpawnDown_3Hp()
+    {
+        enemy = (GameObject)Instantiate(Enemy_3Hp, new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        enemy.tag = "DownEnemy2";
+        Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+    }
+    void SpawnLeft_3Hp()
+    {
+        leftenemy = (GameObject)Instantiate(Enemy_3Hp, new Vector3(-4f, 0f, 1f), Quaternion.identity);
+        leftenemy.tag = "LeftEnemy2";
+        Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
+    }
+    void SpawnRight_3Hp()
+    {
+
+        rightenemy = (GameObject)Instantiate(Enemy_3Hp, new Vector3(4f, 0f, 1f), Quaternion.identity);
+        rightenemy.tag = "RightEnemy2";
+        Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
+    }
     void Start()
     {
 
@@ -108,6 +134,18 @@ public class Enemy_Manager: MonoBehaviour
                     break;
                 case "2left":
                     SpawnLeft_2Hp();
+                    break;
+                case "3up":
+                    SpawnUp_3Hp();
+                    break;
+                case "3right":
+                    SpawnRight_3Hp();
+                    break;
+                case "3down":
+                    SpawnDown_3Hp();
+                    break;
+                case "3left":
+                    SpawnLeft_3Hp();
                     break;
                 case "End":
                     break;

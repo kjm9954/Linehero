@@ -10,8 +10,6 @@ public class AttackBtn : MonoBehaviour
     public GameObject rightline;
     public GameObject upline;
     public GameObject downline;
-    public GameObject Mon;
-    public GameObject Mon_Hp2;
     public GameObject MonManager;
     public GameObject InGame;
     public GameObject Clear;
@@ -53,7 +51,11 @@ public class AttackBtn : MonoBehaviour
             }
             else if (GameObject.FindWithTag("LeftEnemy2"))
             {
-                if (Left.GetComponent<Monster_Destroy>().hp == 2)
+                if (Left.GetComponent<Monster_Destroy>().hp == 3)
+                {
+                    MonManager.GetComponent<Enemy_Manager>().DamageLeftMonster();
+                }
+                else if (Left.GetComponent<Monster_Destroy>().hp == 2)
                 {
                     MonManager.GetComponent<Enemy_Manager>().DamageLeftMonster();
                 }
@@ -75,7 +77,11 @@ public class AttackBtn : MonoBehaviour
             }
             else if (GameObject.FindWithTag("RightEnemy2"))
             {
-                if (Right.GetComponent<Monster_Destroy>().hp == 2)
+                if (Right.GetComponent<Monster_Destroy>().hp == 3)
+                {
+                    MonManager.GetComponent<Enemy_Manager>().DamageRightMonster();
+                }
+                else if (Right.GetComponent<Monster_Destroy>().hp == 2)
                 {
                     MonManager.GetComponent<Enemy_Manager>().DamageRightMonster();
                 }
@@ -97,7 +103,11 @@ public class AttackBtn : MonoBehaviour
             }
             else if (GameObject.FindWithTag("UpEnemy2"))
             {
-                if (Up.GetComponent<Monster_Destroy>().hp == 2)
+                if (Up.GetComponent<Monster_Destroy>().hp == 3)
+                {
+                    MonManager.GetComponent<Enemy_Manager>().DamageUpMonster();
+                }
+                else if (Up.GetComponent<Monster_Destroy>().hp == 2)
                 {
                     MonManager.GetComponent<Enemy_Manager>().DamageUpMonster();
                 }
@@ -119,7 +129,11 @@ public class AttackBtn : MonoBehaviour
             }
             else if (GameObject.FindWithTag("DownEnemy2"))
             {
-                if (Down.GetComponent<Monster_Destroy>().hp == 2)
+                if (Down.GetComponent<Monster_Destroy>().hp == 3)
+                {
+                    MonManager.GetComponent<Enemy_Manager>().DamageDownMonster();
+                }
+                else if (Down.GetComponent<Monster_Destroy>().hp == 2)
                 {
                     MonManager.GetComponent<Enemy_Manager>().DamageDownMonster();
                 }
