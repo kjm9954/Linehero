@@ -141,6 +141,7 @@ MonoBehaviour:
   hp: 1
   hp_:
   - {fileID: 4418007084158240508}
+  spn: {fileID: 6273084363948746193}
 --- !u!114 &447304943167572022
 MonoBehaviour:
   m_ObjectHideFlags: 0

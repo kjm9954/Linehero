@@ -155,10 +155,13 @@ MonoBehaviour:
   Enemy: {fileID: 1774807850293785322, guid: 2d7a5e741a548c146b4da460c2f81e3c, type: 3}
   Enemy_2Hp: {fileID: 1774807850293785322, guid: 3abfeeb525316f645bcb51bfc9f087fb, type: 3}
   Enemy_3Hp: {fileID: 1774807850293785322, guid: 82ddc17a9d2b76d4fa8b1e051cab5e09, type: 3}
-  wating: 3
+  wating: 2
   spawnpoint:
   - 2down
-  - up
+  - 3up
+  - left
+  - 2left
+  - right
 --- !u!4 &92929383
 Transform:
   m_ObjectHideFlags: 0
@@ -857,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &539675781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1822,7 +1825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1281467108
 RectTransform:
   m_ObjectHideFlags: 0

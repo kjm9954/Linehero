@@ -145,6 +145,7 @@ MonoBehaviour:
   - {fileID: 4418007084158240508}
   - {fileID: 6216959034957192041}
   - {fileID: 4126763246555045916}
+  spn: {fileID: 6273084363948746193}
 --- !u!114 &447304943167572022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +161,7 @@ MonoBehaviour:
   move: {fileID: 1774807850293785322}
   Hit: 0
   speed: 1
+  dir: {x: 0, y: 0, z: 0}
 --- !u!58 &5083139182973505007
 CircleCollider2D:
   m_ObjectHideFlags: 0

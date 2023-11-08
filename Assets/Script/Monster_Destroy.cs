@@ -28,7 +28,7 @@ public class Monster_Destroy : MonoBehaviour
             Destroy(hp_[1]);
             
         }
-        else
+        else if (hp == 0)
         {
             Destroy(hp_[0]);
             move.dir.x = 0;
