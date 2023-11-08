@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : BaseUi
 {
-    protected void Awake()
+    protected override void Awake()
     {
         base.Awake();
     }
