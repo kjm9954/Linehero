@@ -152,14 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224225b339276554ebaba76f25a197df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 5235909051058993170, guid: 86e5bbd47aeebdc45adf16d57df6f5a7, type: 3}
-  Enemy_2Hp: {fileID: 2280485133277500938, guid: d67af611fd8a7964399dc9c0cafb3269, type: 3}
-  Enemy_3Hp: {fileID: 2280485133277500938, guid: cbe057bb8639a4a46b5118a4aec3b5dc, type: 3}
+  Enemy: {fileID: 1774807850293785322, guid: 2d7a5e741a548c146b4da460c2f81e3c, type: 3}
+  Enemy_2Hp: {fileID: 1774807850293785322, guid: 3abfeeb525316f645bcb51bfc9f087fb, type: 3}
+  Enemy_3Hp: {fileID: 1774807850293785322, guid: 82ddc17a9d2b76d4fa8b1e051cab5e09, type: 3}
   wating: 3
   spawnpoint:
   - 2down
-  - left
-  - 3up
+  - up
 --- !u!4 &92929383
 Transform:
   m_ObjectHideFlags: 0
@@ -2097,7 +2096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -155}
+  m_AnchoredPosition: {x: -0.00001502, y: -153.4}
   m_SizeDelta: {x: 300, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343680062
@@ -3234,7 +3233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 1f49423ad2c803445b45f1d7c1ae3182, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 14e3394dfad849840ba134a11427cb81, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -3279,7 +3278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b5d7d112ec61c2640ade982100a79dd1, type: 2}
+  - {fileID: 2100000, guid: 269ab36ced7894141bd91d23feed2c7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -46,7 +46,7 @@ public class AttackBtn : MonoBehaviour
         {
             if(GameObject.FindWithTag("LeftEnemy"))
             {
-                Destroy(GameObject.FindWithTag("LeftEnemy"));
+                MonManager.GetComponent<Enemy_Manager>().KillLeftMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
             else if (GameObject.FindWithTag("LeftEnemy2"))
@@ -61,8 +61,8 @@ public class AttackBtn : MonoBehaviour
                 }
                 else if (Left.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    MonManager.GetComponent<Enemy_Manager>().KillLeft2Monster();
                     Debug.Log("Hp 0");
-                    Destroy(GameObject.FindWithTag("LeftEnemy2"));
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
@@ -72,7 +72,7 @@ public class AttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("RightEnemy"))
             {
-                Destroy(GameObject.FindWithTag("RightEnemy"));
+                MonManager.GetComponent<Enemy_Manager>().KillRightMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
             else if (GameObject.FindWithTag("RightEnemy2"))
@@ -87,8 +87,8 @@ public class AttackBtn : MonoBehaviour
                 }
                 else if (Right.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    MonManager.GetComponent<Enemy_Manager>().KillRight2Monster();
                     Debug.Log("Hp 0");
-                    Destroy(GameObject.FindWithTag("RightEnemy2"));
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
@@ -98,7 +98,7 @@ public class AttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("UpEnemy"))
             {
-                Destroy(GameObject.FindWithTag("UpEnemy"));
+                MonManager.GetComponent<Enemy_Manager>().KillUpMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
             else if (GameObject.FindWithTag("UpEnemy2"))
@@ -113,8 +113,8 @@ public class AttackBtn : MonoBehaviour
                 }
                 else if (Up.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    MonManager.GetComponent<Enemy_Manager>().KillUp2Monster();
                     Debug.Log("Hp 0");
-                    Destroy(GameObject.FindWithTag("UpEnemy2"));
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }
@@ -124,7 +124,7 @@ public class AttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("DownEnemy"))
             {
-                Destroy(GameObject.FindWithTag("DownEnemy"));
+                MonManager.GetComponent<Enemy_Manager>().KillDownMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
             else if (GameObject.FindWithTag("DownEnemy2"))
@@ -139,8 +139,8 @@ public class AttackBtn : MonoBehaviour
                 }
                 else if (Down.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    MonManager.GetComponent<Enemy_Manager>().KillDown2Monster();
                     Debug.Log("Hp 0");
-                    Destroy(GameObject.FindWithTag("DownEnemy2"));
                     InGame.GetComponent<InGameManager>().MonsterNum--;
                 }
             }

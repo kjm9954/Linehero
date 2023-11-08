@@ -65,21 +65,6 @@ public class InGameManager : BaseUi
                     Clear.GetComponent<GameClear>().OnClick_Back();
                 }
                 break;
-            case "Start":
-                {
-                    SceneManager.LoadScene("Stage_Select");
-                }
-                break;
-            case "Setting":
-                {
-
-                }
-                break;
-            case "GameEnd":
-                {
-                    Application.Quit();
-                }
-                    break;
         }
     }
 

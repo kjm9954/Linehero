@@ -8,7 +8,7 @@ public class Enemy_Move : MonoBehaviour
     public GameObject move;
     public bool Hit = false;
     public float speed;
-    Vector3 dir;
+    public Vector3 dir;
     // Start is called before the first frame update
 
     private void Start()

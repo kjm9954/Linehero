@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Enemy_Manager: MonoBehaviour
+public class Enemy_Manager : MonoBehaviour
 {
     public GameObject Enemy;
     public GameObject Enemy_2Hp;
@@ -109,7 +109,7 @@ public class Enemy_Manager: MonoBehaviour
 
         if (time >= wating)
         {
-            switch(spawnpoint[i])
+            switch (spawnpoint[i])
             {
                 case "up":
                     SpawnUp();
@@ -160,20 +160,20 @@ public class Enemy_Manager: MonoBehaviour
             }
             time = 0;
         }
-        
+
     }
 
     public void randomMon()
     {
         int pos = UnityEngine.Random.Range(0, 7);
-        switch(pos)
+        switch (pos)
         {
             case 0:
                 spawnpoint[spawnpoint.Length - 1] = "up";
                 break;
             case 1:
                 spawnpoint[spawnpoint.Length - 1] = "down";
-                break; 
+                break;
             case 2:
                 spawnpoint[spawnpoint.Length - 1] = "left";
                 break;
@@ -219,4 +219,46 @@ public class Enemy_Manager: MonoBehaviour
         Mon2.GetComponent<Enemy_Move>().Back();
     }
 
+    public void KillUpMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("UpEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillUp2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("UpEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+
+    }
+    public void KillDownMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("Downnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillDown2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("DownEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+
+    }
+    public void KillLeftMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("LeftEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillLeft2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("LeftEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillRightMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("RightEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillRight2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("RightEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
 }
