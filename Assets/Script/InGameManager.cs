@@ -12,6 +12,7 @@ public class InGameManager : BaseUi
     public GameObject Clear;
     public float MonsterNum;
     public float MonsterLength;
+
     protected override void Awake()
     {
         base.Awake();
