@@ -29,11 +29,11 @@ public class Enemy_Move : MonoBehaviour
             {
                 dir.y = -10;
             }
-            if (move.transform.position.x >= 0.5f && move.transform.position.y <= 0f)
+            if (move.transform.position.x >= 0.5f && move.transform.position.y <= 0.25f)
             {
                 dir.x = 10;
             }
-            if (move.transform.position.x <= -0.5f && move.transform.position.y <= 0f)
+            if (move.transform.position.x <= -0.5f && move.transform.position.y <= 0.25f)
             {
                 dir.x = -10;
             }
@@ -54,11 +54,11 @@ public class Enemy_Move : MonoBehaviour
         {
             dir.y = 1;   
         }
-        if (move.transform.position.x >= 0.5f && move.transform.position.y <= 0f)
+        if (move.transform.position.x >= 0.5f && move.transform.position.y <= 0.25f)
         {
             dir.x = -1;
         }
-        if (move.transform.position.x <= -0.5f && move.transform.position.y <= 0f)
+        if (move.transform.position.x <= -0.5f && move.transform.position.y <= 0.25f)
         {
             dir.x = 1;
         }

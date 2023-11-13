@@ -33,10 +33,15 @@ public class Monster_Destroy : MonoBehaviour
             Destroy(hp_[0]);
             move.dir.x = 0;
             move.dir.y = 0;
-            if(spn.AnimationName == "M1_move")
+            if (spn.AnimationName == "M1_move")
             {
                 spn.AnimationState.SetAnimation(0, "M1_death", false);
                 Invoke("Death", 1.3f);
+            }
+            else if (spn.AnimationName == "M2_move_front" ||
+                spn.AnimationName == "M2_move_back")
+            {
+                Death();
             }
             
         }
