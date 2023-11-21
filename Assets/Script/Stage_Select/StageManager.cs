@@ -37,7 +37,9 @@ public class StageManager : BaseUi
                 break;
             case "Stage3":
                 break;
+                
             case "Back":
+                SceneManager.LoadScene("Main");
                 break;
         }
     }

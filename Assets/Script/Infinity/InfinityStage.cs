@@ -1,6 +1,7 @@
+
 using UnityEngine;
 
-public class Enemy_Manager : MonoBehaviour
+public class InfinityStage : MonoBehaviour
 {
     public GameObject[] Enemy;
     public GameObject[] Enemy_2Hp;
@@ -11,9 +12,14 @@ public class Enemy_Manager : MonoBehaviour
     protected GameObject upenemy;
     public float wating;
     protected float time;
-    public string[] spawnpoint;
+    public float nexttime;
+    public string[] pattern2;
+    public string[] pattern3;
+    public string[] pattern4;
     protected int i = 0;
     public int random = 1;
+    public int pattenrNum = 1;
+    public float enemyspeed;
     // Start is called before the first frame update
 
     protected void SpawnUp()
@@ -22,7 +28,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             upenemy = (GameObject)Instantiate(Enemy[0], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
         }
-        else if(random == 1)
+        else if (random == 1)
         {
             upenemy = (GameObject)Instantiate(Enemy[1], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
         }
@@ -118,7 +124,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             rightenemy = (GameObject)Instantiate(Enemy_2Hp[1], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
         }
-       rightenemy.tag = "RightEnemy2";
+        rightenemy.tag = "RightEnemy2";
         Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnUp_3Hp()
@@ -177,12 +183,46 @@ public class Enemy_Manager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         time += Time.deltaTime;
+        if (pattenrNum == 1)
+        {
+            Pattern1();
+        }
+        else if (pattenrNum == 2)
+        {
+            Pattern2();
+        }
+        else if (pattenrNum == 3)
+        {
+            Pattern3();
+        }
+        else if (pattenrNum == 4)
+        {
+            Pattern4();
+        }
 
+    }
+
+    void Pattern1()
+    {
         if (time >= wating)
         {
-            random = Random.Range(0, 2);
-            switch (spawnpoint[i])
+            SpawnUp();
+            SpawnRight();
+            SpawnDown();
+            SpawnLeft();
+            time = nexttime * -1;
+            pattenrNum = Random.Range(1, 5);
+        }
+    }
+
+    void Pattern2()
+    {
+        if (time >= wating)
+        {
+            
+            switch (pattern2[i])
             {
                 case "up":
                     SpawnUp();
@@ -196,75 +236,89 @@ public class Enemy_Manager : MonoBehaviour
                 case "left":
                     SpawnLeft();
                     break;
-                case "2up":
-                    SpawnUp_2Hp();
+                case "End":
                     break;
-                case "2right":
-                    SpawnRight_2Hp();
+            }
+            if (i < pattern2.Length - 1)
+            {
+                i++;
+            }
+            else if (i == pattern2.Length - 1)
+            {
+                pattenrNum = Random.Range(1, 5);
+                i = 0;
+            }
+            time = nexttime * -1;
+        }
+    }
+
+    void Pattern3()
+    {
+        if (time >= wating)
+        {
+            random = Random.Range(0, 2);
+            switch (pattern3[i])
+            {
+                case "up":
+                    SpawnUp();
                     break;
-                case "2down":
-                    SpawnDown_2Hp();
+                case "right":
+                    SpawnRight();
                     break;
-                case "2left":
-                    SpawnLeft_2Hp();
+                case "down":
+                    SpawnDown();
                     break;
-                case "3up":
-                    SpawnUp_3Hp();
-                    break;
-                case "3right":
-                    SpawnRight_3Hp();
-                    break;
-                case "3down":
-                    SpawnDown_3Hp();
-                    break;
-                case "3left":
-                    SpawnLeft_3Hp();
+                case "left":
+                    SpawnLeft();
                     break;
                 case "End":
                     break;
             }
-            if (i < spawnpoint.Length - 1)
+            if (i < pattern3.Length - 1)
             {
                 i++;
             }
-            else if (i == spawnpoint.Length - 1)
+            else if (i == pattern3.Length - 1)
             {
-                spawnpoint[i] = "End";
+                pattenrNum = Random.Range(1, 5);
+                i = 0;
             }
-            time = 0;
+            time = nexttime * -1;
         }
-
     }
 
-    public void randomMon()
+    void Pattern4()
     {
-        int pos = UnityEngine.Random.Range(0, 7);
-        switch (pos)
+        if (time >= wating)
         {
-            case 0:
-                spawnpoint[spawnpoint.Length - 1] = "up";
-                break;
-            case 1:
-                spawnpoint[spawnpoint.Length - 1] = "down";
-                break;
-            case 2:
-                spawnpoint[spawnpoint.Length - 1] = "left";
-                break;
-            case 3:
-                spawnpoint[spawnpoint.Length - 1] = "right";
-                break;
-            case 4:
-                spawnpoint[spawnpoint.Length - 1] = "2up";
-                break;
-            case 5:
-                spawnpoint[spawnpoint.Length - 1] = "2down";
-                break;
-            case 6:
-                spawnpoint[spawnpoint.Length - 1] = "2left";
-                break;
-            case 7:
-                spawnpoint[spawnpoint.Length - 1] = "2right";
-                break;
+            random = Random.Range(0, 2);
+            switch (pattern4[i])
+            {
+                case "up":
+                    SpawnUp();
+                    break;
+                case "right":
+                    SpawnRight();
+                    break;
+                case "down":
+                    SpawnDown();
+                    break;
+                case "left":
+                    SpawnLeft();
+                    break;
+                case "End":
+                    break;
+            }
+            if (i < pattern4.Length - 1)
+            {
+                i++;
+            }
+            else if (i == pattern4.Length - 1)
+            {
+                pattenrNum = Random.Range(1, 5);
+                i = 0;
+            }
+            time = nexttime * -1;
         }
     }
     public void DamageUpMonster()
@@ -305,7 +359,7 @@ public class Enemy_Manager : MonoBehaviour
     }
     public void KillDownMonster()
     {
-        GameObject Mon2 = GameObject.FindWithTag("Downnemy");
+        GameObject Mon2 = GameObject.FindWithTag("DownEnemy");
         Mon2.GetComponent<Monster_Destroy>().hp -= 1;
     }
     public void KillDown2Monster()

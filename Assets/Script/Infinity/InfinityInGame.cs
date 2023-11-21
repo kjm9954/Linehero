@@ -1,7 +1,8 @@
 
 using UnityEngine;
 
-public class InGameManager : BaseUi
+
+public class InfinityInGame: BaseUi
 {
     public GameObject AttackButton;
     public GameObject Monster;
@@ -13,18 +14,13 @@ public class InGameManager : BaseUi
     protected override void Awake()
     {
         base.Awake();
-        if(gameObject.scene.name != "Infinity")
-        {
-            MonsterNum = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
-            MonsterLength = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
-        }
 
     }
 
     protected override void Start()
     {
         base.Start();
-        
+
     }
     private void Update()
     {
@@ -38,7 +34,7 @@ public class InGameManager : BaseUi
         {
             case "AttackBtn":
                 {
-                    AttackButton.GetComponent<AttackBtn>().DesMonster();
+                    AttackButton.GetComponent<InfinityAttackBtn>().DesMonster();
                     Debug.Log("Button");
                 }
                 break;
@@ -47,7 +43,7 @@ public class InGameManager : BaseUi
                     Time.timeScale = 1f;
                     Debug.Log("Retry");
                     Over.GetComponent<GameOver>().OnClick_Retry();
-                    
+
                 }
                 break;
             case "Clear_Retry":
@@ -72,7 +68,6 @@ public class InGameManager : BaseUi
 
     protected void MonsterBar()
     {
-        int MaxMonster = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
 
     }
 }

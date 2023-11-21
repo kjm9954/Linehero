@@ -1,10 +1,8 @@
 
 using Spine.Unity;
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class InfinityPlayer: MonoBehaviour
 {
     [SerializeField] private int hp;
 
@@ -24,11 +22,11 @@ public class Player : MonoBehaviour
     private void Start()
     {
 
-       spn = GetComponent<SkeletonAnimation>();
+        spn = GetComponent<SkeletonAnimation>();
     }
     private void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,7 +45,7 @@ public class Player : MonoBehaviour
             hp--;
             Damage();
             Hit.GetComponent<Animation>().OnSkill();
-            
+
         }
     }
 
@@ -56,18 +54,12 @@ public class Player : MonoBehaviour
         if (hp == 2)
         {
             Destroy(righthp.gameObject);
-            Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
-            if (gameObject.scene.name != "Infinity")
-                Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
             Invoke("Idle", 1f);
         }
-        else if (hp == 1) 
+        else if (hp == 1)
         {
             Destroy(centerhp.gameObject);
-            Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
-            if (gameObject.scene.name != "Infinity")
-                Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
             Invoke("Idle", 1f);
         }
@@ -76,7 +68,7 @@ public class Player : MonoBehaviour
             Destroy(lefthp.gameObject);
             spn.AnimationState.SetAnimation(0, "die", false);
             BackGround.GetComponent<Fade>().ShowBack();
-            bt.GetComponent<AttackBtn>().OffBtn();
+            bt.GetComponent<InfinityAttackBtn>().OffBtn();
             Invoke("Over", resultime.GetComponent<Result>().FailedTime);
         }
     }
