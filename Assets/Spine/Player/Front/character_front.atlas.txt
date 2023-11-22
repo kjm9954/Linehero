@@ -1,0 +1,167 @@
+
+character_front.png
+size: 211,520
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_모자/모자_1
+  rotate: false
+  xy: 96, 228
+  size: 80, 104
+  orig: 220, 300
+  offset: 28, 158
+  index: -1
+1_모자/모자_2
+  rotate: false
+  xy: 84, 113
+  size: 61, 100
+  orig: 220, 300
+  offset: 72, 163
+  index: -1
+1_모자/모자_3_마스크
+  rotate: false
+  xy: 88, 4
+  size: 76, 35
+  orig: 220, 300
+  offset: 31, 166
+  index: -1
+1_모자/모자_4_오른쪽눈
+  rotate: true
+  xy: 187, 401
+  size: 30, 18
+  orig: 220, 300
+  offset: 70, 196
+  index: -1
+1_모자/모자_4_왼눈
+  rotate: false
+  xy: 178, 228
+  size: 23, 19
+  orig: 220, 300
+  offset: 41, 195
+  index: -1
+1_모자/모자_5_얼굴
+  rotate: true
+  xy: 2, 2
+  size: 91, 84
+  orig: 220, 300
+  offset: 31, 169
+  index: -1
+2_손/손_1_오른손
+  rotate: false
+  xy: 159, 54
+  size: 34, 33
+  orig: 220, 300
+  offset: 85, 105
+  index: -1
+2_손/손_2_왼손
+  rotate: false
+  xy: 159, 89
+  size: 35, 33
+  orig: 220, 300
+  offset: 64, 97
+  index: -1
+3_칼
+  rotate: false
+  xy: 2, 433
+  size: 157, 85
+  orig: 220, 300
+  offset: 60, 96
+  index: -1
+4_앞망토/망토_1_오른쪽
+  rotate: false
+  xy: 2, 95
+  size: 80, 118
+  orig: 220, 300
+  offset: 67, 72
+  index: -1
+4_앞망토/망토_2_왼쪽
+  rotate: false
+  xy: 2, 215
+  size: 92, 117
+  orig: 220, 300
+  offset: 9, 69
+  index: -1
+5_팔/팔_1_오른상완
+  rotate: false
+  xy: 166, 16
+  size: 27, 36
+  orig: 220, 300
+  offset: 87, 143
+  index: -1
+5_팔/팔_2_오른전완
+  rotate: false
+  xy: 178, 249
+  size: 28, 40
+  orig: 220, 300
+  offset: 87, 123
+  index: -1
+5_팔/팔_3_왼상완
+  rotate: true
+  xy: 161, 433
+  size: 28, 41
+  orig: 220, 300
+  offset: 43, 128
+  index: -1
+5_팔/팔_4_왼전완
+  rotate: false
+  xy: 138, 336
+  size: 38, 37
+  orig: 220, 300
+  offset: 47, 108
+  index: -1
+6_상체
+  rotate: false
+  xy: 88, 41
+  size: 69, 70
+  orig: 220, 300
+  offset: 44, 110
+  index: -1
+7_하체/하체_1_왼발
+  rotate: true
+  xy: 178, 291
+  size: 40, 29
+  orig: 220, 300
+  offset: 24, 51
+  index: -1
+7_하체/하체_2_왼허벅지
+  rotate: false
+  xy: 161, 463
+  size: 48, 55
+  orig: 220, 300
+  offset: 39, 88
+  index: -1
+7_하체/하체_3_왼종아리
+  rotate: false
+  xy: 138, 375
+  size: 47, 56
+  orig: 220, 300
+  offset: 32, 62
+  index: -1
+7_하체/하체_4_오른발
+  rotate: true
+  xy: 178, 333
+  size: 40, 31
+  orig: 220, 300
+  offset: 92, 52
+  index: -1
+7_하체/하체_5_오른허벅지
+  rotate: true
+  xy: 147, 170
+  size: 56, 47
+  orig: 220, 300
+  offset: 59, 94
+  index: -1
+7_하체/하체_6_오른종아리
+  rotate: true
+  xy: 147, 124
+  size: 44, 56
+  orig: 220, 300
+  offset: 81, 61
+  index: -1
+8_뒷망토
+  rotate: false
+  xy: 2, 334
+  size: 134, 97
+  orig: 220, 300
+  offset: 14, 72
+  index: -1

@@ -1,0 +1,391 @@
+
+using UnityEngine;
+
+public class InfinityStage : MonoBehaviour
+{
+    public GameObject[] Enemy;
+    public GameObject[] Enemy_2Hp;
+    public GameObject[] Enemy_3Hp;
+    protected GameObject enemy;
+    protected GameObject leftenemy;
+    protected GameObject rightenemy;
+    protected GameObject upenemy;
+    public float wating;
+    protected float time;
+    public float nexttime;
+    public string[] pattern2;
+    public string[] pattern3;
+    public string[] pattern4;
+    protected int i = 0;
+    public int random = 1;
+    public int pattenrNum = 1;
+    public float enemyspeed;
+    // Start is called before the first frame update
+
+    protected void SpawnUp()
+    {
+        if (random == 0)
+        {
+            upenemy = (GameObject)Instantiate(Enemy[0], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            upenemy = (GameObject)Instantiate(Enemy[1], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        }
+        upenemy.tag = "UpEnemy";
+        Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
+    }
+
+    protected void SpawnDown()
+    {
+        if (random == 0)
+        {
+            enemy = (GameObject)Instantiate(Enemy[0], new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            enemy = (GameObject)Instantiate(Enemy[1], new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        }
+        enemy.tag = "DownEnemy";
+        Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnLeft()
+    {
+        if (random == 0)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy[0], new Vector3(-4f, 0.25f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy[1], new Vector3(-4f, 0.25f, 1f), Quaternion.identity);
+        }
+        leftenemy.tag = "LeftEnemy";
+        Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnRight()
+    {
+        if (random == 0)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy[0], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy[1], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
+        }
+        rightenemy.tag = "RightEnemy";
+        Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnUp_2Hp()
+    {
+        if (random == 0)
+        {
+            upenemy = (GameObject)Instantiate(Enemy_2Hp[0], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            upenemy = (GameObject)Instantiate(Enemy_2Hp[1], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        }
+        upenemy.tag = "UpEnemy2";
+        Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnDown_2Hp()
+    {
+        if (random == 0)
+        {
+            enemy = (GameObject)Instantiate(Enemy_2Hp[0], new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            enemy = (GameObject)Instantiate(Enemy_2Hp[1], new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        }
+        enemy.tag = "DownEnemy2";
+        Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnLeft_2Hp()
+    {
+        if (random == 0)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy_2Hp[0], new Vector3(-4f, 0.25f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy_2Hp[1], new Vector3(-4f, 0.25f, 1f), Quaternion.identity);
+        }
+        leftenemy.tag = "LeftEnemy2";
+        Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnRight_2Hp()
+    {
+        if (random == 0)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy_2Hp[0], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy_2Hp[1], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
+        }
+        rightenemy.tag = "RightEnemy2";
+        Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnUp_3Hp()
+    {
+        if (random == 0)
+        {
+            upenemy = (GameObject)Instantiate(Enemy_3Hp[0], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            upenemy = (GameObject)Instantiate(Enemy_3Hp[1], new Vector3(0f, 7.5f, 1f), Quaternion.identity);
+        }
+        upenemy.tag = "UpEnemy2";
+        Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnDown_3Hp()
+    {
+        if (random == 0)
+        {
+            enemy = (GameObject)Instantiate(Enemy_3Hp[0], new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            enemy = (GameObject)Instantiate(Enemy_3Hp[1], new Vector3(0f, -7.5f, 1f), Quaternion.identity);
+        }
+        enemy.tag = "DownEnemy2";
+        Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnLeft_3Hp()
+    {
+        if (random == 0)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy_3Hp[0], new Vector3(-4f, 0.25f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy_3Hp[1], new Vector3(-4f, 0.25f, 1f), Quaternion.identity);
+        }
+        leftenemy.tag = "LeftEnemy2";
+        Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
+    }
+    protected void SpawnRight_3Hp()
+    {
+        if (random == 0)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy_3Hp[0], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
+        }
+        else if (random == 1)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy_3Hp[1], new Vector3(4f, 0.25f, 1f), Quaternion.identity);
+        }
+        rightenemy.tag = "RightEnemy2";
+        Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        
+        time += Time.deltaTime;
+        if (pattenrNum == 1)
+        {
+            Pattern1();
+        }
+        else if (pattenrNum == 2)
+        {
+            Pattern2();
+        }
+        else if (pattenrNum == 3)
+        {
+            Pattern3();
+        }
+        else if (pattenrNum == 4)
+        {
+            Pattern4();
+        }
+
+    }
+
+    void Pattern1()
+    {
+        if (time >= wating)
+        {
+            SpawnUp();
+            SpawnRight();
+            SpawnDown();
+            SpawnLeft();
+            time = nexttime * -1;
+            pattenrNum = Random.Range(1, 5);
+        }
+    }
+
+    void Pattern2()
+    {
+        if (time >= wating)
+        {
+            
+            switch (pattern2[i])
+            {
+                case "up":
+                    SpawnUp();
+                    break;
+                case "right":
+                    SpawnRight();
+                    break;
+                case "down":
+                    SpawnDown();
+                    break;
+                case "left":
+                    SpawnLeft();
+                    break;
+                case "End":
+                    break;
+            }
+            if (i < pattern2.Length - 1)
+            {
+                i++;
+            }
+            else if (i == pattern2.Length - 1)
+            {
+                pattenrNum = Random.Range(1, 5);
+                i = 0;
+            }
+            time = nexttime * -1;
+        }
+    }
+
+    void Pattern3()
+    {
+        if (time >= wating)
+        {
+            random = Random.Range(0, 2);
+            switch (pattern3[i])
+            {
+                case "up":
+                    SpawnUp();
+                    break;
+                case "right":
+                    SpawnRight();
+                    break;
+                case "down":
+                    SpawnDown();
+                    break;
+                case "left":
+                    SpawnLeft();
+                    break;
+                case "End":
+                    break;
+            }
+            if (i < pattern3.Length - 1)
+            {
+                i++;
+            }
+            else if (i == pattern3.Length - 1)
+            {
+                pattenrNum = Random.Range(1, 5);
+                i = 0;
+            }
+            time = nexttime * -1;
+        }
+    }
+
+    void Pattern4()
+    {
+        if (time >= wating)
+        {
+            random = Random.Range(0, 2);
+            switch (pattern4[i])
+            {
+                case "up":
+                    SpawnUp();
+                    break;
+                case "right":
+                    SpawnRight();
+                    break;
+                case "down":
+                    SpawnDown();
+                    break;
+                case "left":
+                    SpawnLeft();
+                    break;
+                case "End":
+                    break;
+            }
+            if (i < pattern4.Length - 1)
+            {
+                i++;
+            }
+            else if (i == pattern4.Length - 1)
+            {
+                pattenrNum = Random.Range(1, 5);
+                i = 0;
+            }
+            time = nexttime * -1;
+        }
+    }
+    public void DamageUpMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("UpEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+        Mon2.GetComponent<Enemy_Move>().Back();
+    }
+    public void DamageLeftMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("LeftEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+        Mon2.GetComponent<Enemy_Move>().Back();
+    }
+    public void DamageDownMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("DownEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+        Mon2.GetComponent<Enemy_Move>().Back();
+    }
+    public void DamageRightMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("RightEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+        Mon2.GetComponent<Enemy_Move>().Back();
+    }
+
+    public void KillUpMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("UpEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillUp2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("UpEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+
+    }
+    public void KillDownMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("DownEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillDown2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("DownEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+
+    }
+    public void KillLeftMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("LeftEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillLeft2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("LeftEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillRightMonster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("RightEnemy");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+    public void KillRight2Monster()
+    {
+        GameObject Mon2 = GameObject.FindWithTag("RightEnemy2");
+        Mon2.GetComponent<Monster_Destroy>().hp -= 1;
+    }
+}

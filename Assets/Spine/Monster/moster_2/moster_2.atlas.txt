@@ -1,0 +1,111 @@
+
+moster_2.png
+size: 845,160
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+몹2_body1
+  rotate: true
+  xy: 118, 8
+  size: 150, 184
+  orig: 150, 184
+  offset: 0, 0
+  index: -1
+몹2_body11
+  rotate: true
+  xy: 537, 59
+  size: 99, 70
+  orig: 150, 184
+  offset: 0, 0
+  index: -1
+몹2_body2
+  rotate: false
+  xy: 443, 43
+  size: 92, 115
+  orig: 230, 230
+  offset: 19, 8
+  index: -1
+몹2_body22
+  rotate: true
+  xy: 798, 16
+  size: 68, 45
+  orig: 230, 230
+  offset: 22, 7
+  index: -1
+몹2_body3
+  rotate: true
+  xy: 709, 3
+  size: 61, 87
+  orig: 230, 230
+  offset: 145, 6
+  index: -1
+몹2_body33
+  rotate: false
+  xy: 463, 5
+  size: 55, 36
+  orig: 230, 230
+  offset: 149, 8
+  index: -1
+몹2_eye1
+  rotate: true
+  xy: 759, 86
+  size: 72, 69
+  orig: 230, 230
+  offset: 134, 98
+  index: -1
+몹2_eye2
+  rotate: false
+  xy: 598, 3
+  size: 47, 54
+  orig: 230, 230
+  offset: 54, 50
+  index: -1
+몹2_eye3
+  rotate: false
+  xy: 443, 4
+  size: 18, 37
+  orig: 230, 230
+  offset: 156, 46
+  index: -1
+주황 몬스터 공격 중간/가장큰거
+  rotate: true
+  xy: 2, 2
+  size: 156, 114
+  orig: 230, 230
+  offset: 74, 90
+  index: -1
+주황 몬스터 공격 중간/가장큰거 중간
+  rotate: false
+  xy: 304, 11
+  size: 137, 147
+  orig: 230, 230
+  offset: 23, 49
+  index: -1
+주황 몬스터 공격 중간/제일 작은거 머리
+  rotate: false
+  xy: 537, 3
+  size: 59, 54
+  orig: 230, 230
+  offset: 147, 37
+  index: -1
+주황 몬스터 공격 중간/제일 작은거 중간
+  rotate: false
+  xy: 647, 12
+  size: 60, 48
+  orig: 230, 230
+  offset: 152, 22
+  index: -1
+주황 몬스터 공격 중간/중간 머리
+  rotate: true
+  xy: 609, 62
+  size: 96, 85
+  orig: 230, 230
+  offset: 14, 44
+  index: -1
+주황 몬스터 공격 중간/중간 사이즈 중간
+  rotate: true
+  xy: 696, 66
+  size: 92, 61
+  orig: 230, 230
+  offset: 0, 20
+  index: -1

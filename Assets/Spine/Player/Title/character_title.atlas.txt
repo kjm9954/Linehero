@@ -1,0 +1,69 @@
+
+character_title.png
+size: 303,418
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_모자
+  rotate: false
+  xy: 139, 2
+  size: 147, 141
+  orig: 302, 281
+  offset: 50, 140
+  index: -1
+2_왼망토
+  rotate: true
+  xy: 2, 24
+  size: 121, 135
+  orig: 302, 281
+  offset: 0, 36
+  index: -1
+3_오망토
+  rotate: true
+  xy: 140, 145
+  size: 110, 122
+  orig: 302, 281
+  offset: 121, 51
+  index: -1
+3_중망토
+  rotate: true
+  xy: 2, 147
+  size: 108, 136
+  orig: 302, 281
+  offset: 88, 27
+  index: -1
+4_오다리
+  rotate: true
+  xy: 216, 343
+  size: 73, 85
+  orig: 302, 281
+  offset: 127, 2
+  index: -1
+4_왼다리
+  rotate: true
+  xy: 2, 271
+  size: 78, 93
+  orig: 302, 281
+  offset: 48, 0
+  index: -1
+5_뒷망토
+  rotate: false
+  xy: 91, 351
+  size: 123, 65
+  orig: 302, 281
+  offset: 0, 18
+  index: -1
+6_손
+  rotate: false
+  xy: 2, 363
+  size: 87, 53
+  orig: 302, 281
+  offset: 171, 121
+  index: -1
+7_칼
+  rotate: true
+  xy: 97, 257
+  size: 84, 200
+  orig: 302, 281
+  offset: 190, 0
+  index: -1
