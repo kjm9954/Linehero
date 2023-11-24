@@ -1,3 +1,4 @@
+using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,13 @@ public class Enemy_Move : MonoBehaviour
     public bool Hit = false;
     public float speed;
     public Vector3 dir;
+    SkeletonAnimation skani;
+    public float animation_speed;
     // Start is called before the first frame update
 
     private void Start()
     {
+        skani = GetComponent<SkeletonAnimation>();
         Hit = false;
         MonMove();
     }

@@ -169,6 +169,10 @@ MonoBehaviour:
   - 2left
   - right
   random: 1
+  width_x: 4
+  width_y: 0.25
+  height_x: 0
+  height_y: 7.5
 --- !u!4 &92929383
 Transform:
   m_ObjectHideFlags: 0
