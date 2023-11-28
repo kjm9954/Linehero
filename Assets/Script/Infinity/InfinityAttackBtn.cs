@@ -18,17 +18,31 @@ public class InfinityAttackBtn : MonoBehaviour
     public GameObject Stage;
     public GameObject Back;
     public float wating = 0;
+    Color _color;
+    Image _image;
+    [SerializeField] int Btn_count = 0;
     GameObject Left = null;
     GameObject Right = null;
     GameObject Up = null;
     GameObject Down = null;
 
+    private void Start()
+    {
+        _image = GetComponent<Image>();
+        _color = GetComponent<Image>().color;
+
+    }
     private void Update()
     {
         Left = GameObject.FindWithTag("LeftEnemy2");
         Right = GameObject.FindWithTag("RightEnemy2");
         Up = GameObject.FindWithTag("UpEnemy2");
         Down = GameObject.FindWithTag("DownEnemy2");
+        if (Btn_count >= 3)
+        {
+            _color.a = 0.7f;
+            _image.color = _color;
+        }
     }
     public void DesMonster()
     {
@@ -144,6 +158,7 @@ public class InfinityAttackBtn : MonoBehaviour
             }
             attck();
         }
+        Btn_count++;
     }
 
     void ClearStage()

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    [SerializeField] private float m_force;
+    [SerializeField] public float m_force;
     [SerializeField] private Vector2 m_offset = Vector2.zero;
     public float time;
 
