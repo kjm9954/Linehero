@@ -22,74 +22,74 @@ public class Enemy_Manager : MonoBehaviour
 
     protected void SpawnUp()
     {
-        upenemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, height_y, 1f), Quaternion.identity);
+        upenemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, height_y, -1f), Quaternion.identity);
         upenemy.tag = "UpEnemy";
         Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnDown()
     {
-        enemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, -height_y, 1f), Quaternion.identity);
+        enemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, -height_y, -1f), Quaternion.identity);
         enemy.tag = "DownEnemy";
         Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnLeft()
     {
-        leftenemy = (GameObject)Instantiate(Enemy[random], new Vector3(-width_x, width_y, 1f), Quaternion.identity);
+        leftenemy = (GameObject)Instantiate(Enemy[random], new Vector3(-width_x, width_y, -1f), Quaternion.identity);
         leftenemy.tag = "LeftEnemy";
         Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnRight()
     {
-        rightenemy = (GameObject)Instantiate(Enemy[random], new Vector3(width_x, width_y, 1f), Quaternion.identity);
+        rightenemy = (GameObject)Instantiate(Enemy[random], new Vector3(width_x, width_y, -1f), Quaternion.identity);
         rightenemy.tag = "RightEnemy";
         Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnUp_2Hp()
     {
-        upenemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(height_x, height_y, 1f), Quaternion.identity);
+        upenemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(height_x, height_y, -1f), Quaternion.identity);
         upenemy.tag = "UpEnemy2";
         Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnDown_2Hp()
     {
-        enemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(height_x, -height_y, 1f), Quaternion.identity);
+        enemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(height_x, -height_y, -1f), Quaternion.identity);
         enemy.tag = "DownEnemy2";
         Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnLeft_2Hp()
     {
-        leftenemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(-width_x, width_y, 1f), Quaternion.identity);
+        leftenemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(-width_x, width_y, -1f), Quaternion.identity);
         leftenemy.tag = "LeftEnemy2";
         Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnRight_2Hp()
     {
 
-        rightenemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(width_x, width_y, 1f), Quaternion.identity);
+        rightenemy = (GameObject)Instantiate(Enemy_2Hp[random], new Vector3(width_x, width_y, -1f), Quaternion.identity);
         rightenemy.tag = "RightEnemy2";
         Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnUp_3Hp()
     {
-        upenemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(height_x, height_y, 1f), Quaternion.identity);
+        upenemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(height_x, height_y, -1f), Quaternion.identity);
         upenemy.tag = "UpEnemy2";
         Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnDown_3Hp()
     {
-        enemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(height_x, -height_y, 1f), Quaternion.identity);
+        enemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(height_x, -height_y, -1f), Quaternion.identity);
         enemy.tag = "DownEnemy2";
         Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnLeft_3Hp()
     {
-        leftenemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(-width_x, width_y, 1f), Quaternion.identity);
+        leftenemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(-width_x, width_y, -1f), Quaternion.identity);
         leftenemy.tag = "LeftEnemy2";
         Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
     }
     protected void SpawnRight_3Hp()
     {
-        rightenemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(width_x, width_y, 1f), Quaternion.identity);
+        rightenemy = (GameObject)Instantiate(Enemy_3Hp[random], new Vector3(width_x, width_y, -1f), Quaternion.identity);
         rightenemy.tag = "RightEnemy2";
         Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
     }
