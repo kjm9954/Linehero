@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class InfinityPlayer: MonoBehaviour
 {
-    [SerializeField] private int hp;
-
+    public int hp;
+    int random;
+    public AudioClip[] hit_audio;
     public GameObject lefthp;
     public GameObject centerhp;
     public GameObject righthp;
@@ -15,8 +16,7 @@ public class InfinityPlayer: MonoBehaviour
     public GameObject bt;
     public GameObject resultime;
     public GameObject BackGround;
-    SkeletonAnimation spn;
-    float time;
+    public SkeletonAnimation spn;
     // Start is called before the first frame update
 
     private void Start()
@@ -55,12 +55,14 @@ public class InfinityPlayer: MonoBehaviour
         {
             Destroy(righthp.gameObject);
             spn.AnimationState.SetAnimation(0, "hit", false);
+            OnSound();
             Invoke("Idle", 1f);
         }
         else if (hp == 1)
         {
             Destroy(centerhp.gameObject);
             spn.AnimationState.SetAnimation(0, "hit", false);
+            OnSound();
             Invoke("Idle", 1f);
         }
         else if (hp == 0)
@@ -69,6 +71,7 @@ public class InfinityPlayer: MonoBehaviour
             spn.AnimationState.SetAnimation(0, "die", false);
             BackGround.GetComponent<Fade>().ShowBack();
             bt.GetComponent<InfinityAttackBtn>().OffBtn();
+            OnSound();
             Invoke("Over", resultime.GetComponent<Result>().FailedTime);
         }
     }
@@ -82,5 +85,13 @@ public class InfinityPlayer: MonoBehaviour
     {
         over.GetComponent<GameOver>().show();
         Time.timeScale = 0f;
+    }
+
+    void OnSound()
+    {
+        random = UnityEngine.Random.Range(0, 2);
+        AudioSource hit = GetComponent<AudioSource>();
+        hit.clip = hit_audio[random];
+        hit.Play();
     }
 }

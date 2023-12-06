@@ -19,18 +19,35 @@ public class AttackBtn : MonoBehaviour
     public GameObject resultime;
     public GameObject Stage;
     public GameObject Back;
+    int random;
+    public AudioClip[] attack_audio;
+    public bool tuto;
+    Color _color;
+    Image _image;
     public float wating = 0;
+    [SerializeField] int Btn_count = 0;
     GameObject Left = null;
     GameObject Right = null;
     GameObject Up = null;
     GameObject Down = null;
 
+    private void Start()
+    {
+        _image = GetComponent<Image>();
+        _color = GetComponent<Image>().color;
+        
+    }
     private void Update()
     {
         Left = GameObject.FindWithTag("LeftEnemy2");
         Right = GameObject.FindWithTag("RightEnemy2");
         Up = GameObject.FindWithTag("UpEnemy2");
         Down = GameObject.FindWithTag("DownEnemy2");
+        if (Btn_count >= 3)
+        {
+            _color.a = 0.7f;
+            _image.color = _color;
+        }
     }
     public void DesMonster()
     {
@@ -67,6 +84,7 @@ public class AttackBtn : MonoBehaviour
                 }
             }
             attck();
+
         }
         if (rightline.GetComponent<LineManager>().InLine)
         {
@@ -119,11 +137,14 @@ public class AttackBtn : MonoBehaviour
                 }
             }
             attck();
+
         }
         if (downline.GetComponent<LineManager>().InLine)
         {
             if (GameObject.FindWithTag("DownEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<Enemy_Manager>().KillDownMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
@@ -131,14 +152,21 @@ public class AttackBtn : MonoBehaviour
             {
                 if (Down.GetComponent<Monster_Destroy>().hp == 3)
                 {
+
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageDownMonster();
                 }
                 else if (Down.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageDownMonster();
                 }
                 else if (Down.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().KillDown2Monster();
                     Debug.Log("Hp 0");
                     InGame.GetComponent<InGameManager>().MonsterNum--;
@@ -146,6 +174,7 @@ public class AttackBtn : MonoBehaviour
             }
             attck();
         }
+        Btn_count++;
     }
 
     void ClearStage()
@@ -164,8 +193,11 @@ public class AttackBtn : MonoBehaviour
     {
         spn.GetComponent<SpineAnimation>().Attack();
         Invoke("Idle", 0.6f);
-        Camera.GetComponent<CameraShake>().C_Shake();
         skill.GetComponent<Animation>().OnSkill();
+        random = Random.Range(0, 2);
+        AudioSource attack = GetComponent<AudioSource>();
+        attack.clip = attack_audio[random];
+        attack.Play();
         ClearAnimation();
     }
     void Idle()
@@ -181,5 +213,10 @@ public class AttackBtn : MonoBehaviour
             Stage.GetComponent<Stage_Clear>().Stage();
             Invoke("ClearStage", resultime.GetComponent<Result>().ClearTime);
         }
+    }
+
+    public void Tutorial_Click()
+    {
+        tuto = true;
     }
 }

@@ -28,6 +28,11 @@ public class Fade : MonoBehaviour
         transform.gameObject.SetActive(true);
         StartCoroutine(FadeEffect(0, 1));
     }
+
+    public void ShowOut()
+    {
+        StartCoroutine(FadeEffect(1, 0));
+    }
     private IEnumerator FadeEffect (float start, float end)
     {
         float currentTime = 0.0f;

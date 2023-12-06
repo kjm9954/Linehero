@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: f8b1f22fc08f649429d1da91c21bef25, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: a2016d496fb2c0a43ac049131da92dcb, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
   Hit: 0
   speed: 2.5
   dir: {x: 0, y: 0, z: 0}
+  animation_speed: 0
 --- !u!114 &5065973125905954302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +309,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5fb53c0c752f0e4bb790d8562ebafa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c5770855c9fa4b4dbcb200220111299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

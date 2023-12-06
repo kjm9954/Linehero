@@ -7,28 +7,28 @@ public class InGameManager : BaseUi
     public GameObject Monster;
     public GameObject Over;
     public GameObject Clear;
+    [SerializeField] GameObject mark;
+    Vector3 trans;
     public float MonsterNum;
     public float MonsterLength;
 
     protected override void Awake()
     {
+        trans = mark.GetComponent<Transform>().position;
         base.Awake();
-        if(gameObject.scene.name != "Infinity")
-        {
-            MonsterNum = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
-            MonsterLength = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
-        }
+        MonsterNum = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
+        MonsterLength = Monster.GetComponent<Enemy_Manager>().spawnpoint.Length;
 
     }
 
     protected override void Start()
     {
         base.Start();
-        
     }
     private void Update()
     {
         imgs[0].fillAmount = MonsterNum / MonsterLength;
+        trans.x *= MonsterNum / MonsterLength;
     }
 
     protected override void ButtonFuncion(string btnname)
