@@ -193,7 +193,6 @@ public class AttackBtn : MonoBehaviour
     {
         spn.GetComponent<SpineAnimation>().Attack();
         Invoke("Idle", 0.6f);
-        //GetComponent<CameraShake>().C_Shake();
         skill.GetComponent<Animation>().OnSkill();
         random = Random.Range(0, 2);
         AudioSource attack = GetComponent<AudioSource>();

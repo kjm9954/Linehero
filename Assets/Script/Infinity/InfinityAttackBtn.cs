@@ -18,6 +18,8 @@ public class InfinityAttackBtn : MonoBehaviour
     public GameObject Stage;
     public GameObject Back;
     public float wating = 0;
+    int random;
+    public AudioClip[] attack_audio;
     Color _color;
     Image _image;
     [SerializeField] int Btn_count = 0;
@@ -177,8 +179,10 @@ public class InfinityAttackBtn : MonoBehaviour
     {
         spn.GetComponent<SpineAnimation>().Attack();
         Invoke("Idle", 0.6f);
-        Camera.GetComponent<CameraShake>().C_Shake();
         skill.GetComponent<Animation>().OnSkill();
+        AudioSource attack = GetComponent<AudioSource>();
+        attack.clip = attack_audio[random];
+        attack.Play();
         ClearAnimation();
     }
     void Idle()
