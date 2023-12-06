@@ -59,8 +59,47 @@ public class Monster_Destroy : MonoBehaviour
         bool isPlayer = collision.gameObject.CompareTag("Player");
         if (isPlayer)
         {
-            Destroy(gameObject);
-
+            move.GetComponent<Enemy_Move>().MonStop();
+            if (spn != null)
+            {
+                if (spn.AnimationName == "M1_move")
+                {
+                    if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
+                        || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
+                    {
+                        spn.AnimationState.SetAnimation(0, "M1_attack_side", false);
+                    }
+                    else if (gameObject.CompareTag("UpEnemy"))
+                    {
+                        spn.AnimationState.SetAnimation(0, "M1_attack_front", false);
+                    }
+                    else if (gameObject.CompareTag("DownEnemy"))
+                    {
+                        spn.AnimationState.SetAnimation(0, "M1_attack_back", false);
+                    }
+                    Invoke("Death", 0.8f);
+                }
+                else if (spn.AnimationName == "M2_move_front" ||
+                        spn.AnimationName == "M2_move_back")
+                {
+                    if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
+                        || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
+                    {
+                        spn.AnimationState.SetAnimation(0, "M2_attack_side", false);
+                    }
+                    else if (gameObject.CompareTag("UpEnemy"))
+                    {
+                        spn.AnimationState.SetAnimation(0, "M2_attack_front", false);
+                    }
+                    else if (gameObject.CompareTag("DownEnemy"))
+                    {
+                        spn.AnimationState.SetAnimation(0, "M2_attack_back", false);
+                    }
+                    Invoke("Death", 0.8f);
+                }
+            }
+            else
+                Invoke("Death", 0.8f);
         }
     }
 

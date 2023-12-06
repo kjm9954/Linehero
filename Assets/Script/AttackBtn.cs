@@ -19,6 +19,9 @@ public class AttackBtn : MonoBehaviour
     public GameObject resultime;
     public GameObject Stage;
     public GameObject Back;
+    int random;
+    public AudioClip[] attack_audio;
+    public bool tuto;
     Color _color;
     Image _image;
     public float wating = 0;
@@ -190,8 +193,12 @@ public class AttackBtn : MonoBehaviour
     {
         spn.GetComponent<SpineAnimation>().Attack();
         Invoke("Idle", 0.6f);
-        //.GetComponent<CameraShake>().C_Shake();
+        //GetComponent<CameraShake>().C_Shake();
         skill.GetComponent<Animation>().OnSkill();
+        random = Random.Range(0, 2);
+        AudioSource attack = GetComponent<AudioSource>();
+        attack.clip = attack_audio[random];
+        attack.Play();
         ClearAnimation();
     }
     void Idle()
@@ -207,5 +214,10 @@ public class AttackBtn : MonoBehaviour
             Stage.GetComponent<Stage_Clear>().Stage();
             Invoke("ClearStage", resultime.GetComponent<Result>().ClearTime);
         }
+    }
+
+    public void Tutorial_Click()
+    {
+        tuto = true;
     }
 }

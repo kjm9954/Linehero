@@ -2,12 +2,12 @@
 using Spine.Unity;
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int hp;
-
+    public int hp;
+    int random;
+    public AudioClip[] hit_audio;
     public GameObject lefthp;
     public GameObject centerhp;
     public GameObject righthp;
@@ -17,8 +17,7 @@ public class Player : MonoBehaviour
     public GameObject bt;
     public GameObject resultime;
     public GameObject BackGround;
-    SkeletonAnimation spn;
-    float time;
+    public SkeletonAnimation spn;
     // Start is called before the first frame update
 
     private void Start()
@@ -60,6 +59,10 @@ public class Player : MonoBehaviour
             if (gameObject.scene.name != "Infinity")
                 Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
+            random = UnityEngine.Random.Range(0, 2);
+            AudioSource hit = GetComponent<AudioSource>();
+            hit.clip = hit_audio[random];
+            hit.Play();
             Invoke("Idle", 1f);
         }
         else if (hp == 1) 
@@ -69,6 +72,10 @@ public class Player : MonoBehaviour
             if (gameObject.scene.name != "Infinity")
                 Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
+            random = UnityEngine.Random.Range(0, 2);
+            AudioSource hit = GetComponent<AudioSource>();
+            hit.clip = hit_audio[random];
+            hit.Play();
             Invoke("Idle", 1f);
         }
         else if (hp == 0)
@@ -77,6 +84,10 @@ public class Player : MonoBehaviour
             spn.AnimationState.SetAnimation(0, "die", false);
             BackGround.GetComponent<Fade>().ShowBack();
             bt.GetComponent<AttackBtn>().OffBtn();
+            random = UnityEngine.Random.Range(0, 2);
+            AudioSource hit = GetComponent<AudioSource>();
+            hit.clip = hit_audio[random];
+            hit.Play();
             Invoke("Over", resultime.GetComponent<Result>().FailedTime);
         }
     }

@@ -81,6 +81,16 @@ public class Enemy_Move : MonoBehaviour
         //Invoke("OffBack", 1f);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.name == "tutorial_mon(Clone)")
+        {
+            if (collision.gameObject.CompareTag("Line"))
+            {
+                MonStop();
+            }
+        }
+    }
     void OffBack()
     {
         MonMove();

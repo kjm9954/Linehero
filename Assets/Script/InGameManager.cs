@@ -24,7 +24,6 @@ public class InGameManager : BaseUi
     protected override void Start()
     {
         base.Start();
-        
     }
     private void Update()
     {

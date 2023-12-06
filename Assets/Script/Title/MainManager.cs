@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : BaseUi
 {
+    public GameObject setting;
     protected override void Awake()
     {
         base.Awake();
@@ -21,12 +22,13 @@ public class MainManager : BaseUi
         {
             case "Start":
                 {
-                    SceneManager.LoadScene("Stage_Select");
+                    Invoke("Chage", 0.3f);
                 }
                 break;
             case "Setting":
                 {
-
+                    if (setting.activeInHierarchy == false)
+                        setting.SetActive(true);
                 }
                 break;
             case "GameEnd":
@@ -35,5 +37,9 @@ public class MainManager : BaseUi
                 }
                 break;
         }
+    }
+    void Chage()
+    {
+        SceneManager.LoadScene("Stage_Select");
     }
 }
