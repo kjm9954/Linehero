@@ -1,0 +1,279 @@
+
+character_front.png
+size: 1319,271
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_모자/모자_1
+  rotate: false
+  xy: 720, 9
+  size: 80, 104
+  orig: 220, 300
+  offset: 28, 158
+  index: -1
+1_모자/모자_2
+  rotate: false
+  xy: 802, 13
+  size: 61, 100
+  orig: 220, 300
+  offset: 72, 163
+  index: -1
+1_모자/모자_3_마스크
+  rotate: true
+  xy: 2, 2
+  size: 76, 35
+  orig: 220, 300
+  offset: 31, 166
+  index: -1
+1_모자/모자_4_오른쪽눈
+  rotate: false
+  xy: 1149, 209
+  size: 30, 18
+  orig: 220, 300
+  offset: 70, 196
+  index: -1
+1_모자/모자_4_왼눈
+  rotate: true
+  xy: 1164, 7
+  size: 23, 19
+  orig: 220, 300
+  offset: 41, 195
+  index: -1
+1_모자/모자_5_얼굴
+  rotate: false
+  xy: 449, 4
+  size: 91, 84
+  orig: 220, 300
+  offset: 31, 169
+  index: -1
+2_손/손_1_오른손
+  rotate: false
+  xy: 1282, 201
+  size: 34, 33
+  orig: 220, 300
+  offset: 85, 105
+  index: -1
+2_손/손_2_왼손
+  rotate: false
+  xy: 1282, 236
+  size: 35, 33
+  orig: 220, 300
+  offset: 64, 97
+  index: -1
+3_칼
+  rotate: false
+  xy: 290, 2
+  size: 157, 85
+  orig: 220, 300
+  offset: 60, 96
+  index: -1
+4_앞망토/망토_1_오른쪽
+  rotate: false
+  xy: 865, 4
+  size: 80, 118
+  orig: 220, 300
+  offset: 67, 72
+  index: -1
+4_앞망토/망토_2_왼쪽
+  rotate: false
+  xy: 947, 5
+  size: 92, 117
+  orig: 220, 300
+  offset: 9, 69
+  index: -1
+5_팔/팔_1_오른상완
+  rotate: true
+  xy: 1126, 3
+  size: 27, 36
+  orig: 220, 300
+  offset: 87, 143
+  index: -1
+5_팔/팔_2_오른전완
+  rotate: true
+  xy: 1084, 2
+  size: 28, 40
+  orig: 220, 300
+  offset: 87, 123
+  index: -1
+5_팔/팔_3_왼상완
+  rotate: true
+  xy: 1041, 2
+  size: 28, 41
+  orig: 220, 300
+  offset: 43, 128
+  index: -1
+5_팔/팔_4_왼전완
+  rotate: true
+  xy: 1280, 41
+  size: 38, 37
+  orig: 220, 300
+  offset: 47, 108
+  index: -1
+6_상체
+  rotate: true
+  xy: 1247, 130
+  size: 69, 70
+  orig: 220, 300
+  offset: 44, 110
+  index: -1
+7_하체/하체_1_왼발
+  rotate: false
+  xy: 1185, 6
+  size: 40, 29
+  orig: 220, 300
+  offset: 24, 51
+  index: -1
+7_하체/하체_2_왼허벅지
+  rotate: true
+  xy: 1177, 37
+  size: 48, 55
+  orig: 220, 300
+  offset: 39, 88
+  index: -1
+7_하체/하체_3_왼종아리
+  rotate: true
+  xy: 1185, 87
+  size: 47, 56
+  orig: 220, 300
+  offset: 32, 62
+  index: -1
+7_하체/하체_4_오른발
+  rotate: true
+  xy: 1149, 229
+  size: 40, 31
+  orig: 220, 300
+  offset: 92, 52
+  index: -1
+7_하체/하체_5_오른허벅지
+  rotate: false
+  xy: 1243, 81
+  size: 56, 47
+  orig: 220, 300
+  offset: 59, 94
+  index: -1
+7_하체/하체_6_오른종아리
+  rotate: false
+  xy: 1234, 23
+  size: 44, 56
+  orig: 220, 300
+  offset: 81, 61
+  index: -1
+8_뒷망토
+  rotate: false
+  xy: 1041, 32
+  size: 134, 97
+  orig: 220, 300
+  offset: 14, 72
+  index: -1
+skill/skill_0001_250x300
+  rotate: false
+  xy: 1175, 136
+  size: 70, 63
+  orig: 250, 300
+  offset: 139, 42
+  index: -1
+skill/skill_0002_250x300
+  rotate: false
+  xy: 39, 3
+  size: 103, 75
+  orig: 250, 300
+  offset: 106, 41
+  index: -1
+skill/skill_0003_250x300
+  rotate: true
+  xy: 961, 131
+  size: 138, 129
+  orig: 250, 300
+  offset: 71, 42
+  index: -1
+skill/skill_0004_250x300
+  rotate: false
+  xy: 2, 80
+  size: 162, 189
+  orig: 250, 300
+  offset: 48, 41
+  index: -1
+skill/skill_0005_250x300
+  rotate: false
+  xy: 307, 90
+  size: 149, 179
+  orig: 250, 300
+  offset: 48, 52
+  index: -1
+skill/skill_0006_250x300
+  rotate: true
+  xy: 1092, 132
+  size: 67, 81
+  orig: 250, 300
+  offset: 52, 146
+  index: -1
+skill/skill_mini_0001_250x300
+  rotate: true
+  xy: 542, 8
+  size: 84, 61
+  orig: 250, 300
+  offset: 110, 59
+  index: -1
+skill/skill_mini_0002_250x300
+  rotate: false
+  xy: 605, 5
+  size: 113, 106
+  orig: 250, 300
+  offset: 82, 59
+  index: -1
+skill/skill_mini_0003_250x300
+  rotate: false
+  xy: 703, 115
+  size: 132, 154
+  orig: 250, 300
+  offset: 63, 59
+  index: -1
+skill/skill_mini_0004_250x300
+  rotate: false
+  xy: 837, 124
+  size: 122, 145
+  orig: 250, 300
+  offset: 62, 68
+  index: -1
+skill/skill_mini_0005_250x300
+  rotate: false
+  xy: 1092, 203
+  size: 55, 66
+  orig: 250, 300
+  offset: 66, 144
+  index: -1
+skill_2/skill2_0001_250x300
+  rotate: false
+  xy: 144, 4
+  size: 144, 74
+  orig: 250, 300
+  offset: 89, 64
+  index: -1
+skill_2/skill2_0002_250x300
+  rotate: true
+  xy: 458, 94
+  size: 175, 104
+  orig: 250, 300
+  offset: 49, 64
+  index: -1
+skill_2/skill2_0003_250x300
+  rotate: true
+  xy: 166, 89
+  size: 180, 139
+  orig: 250, 300
+  offset: 36, 67
+  index: -1
+skill_2/skill2_0004_250x300
+  rotate: true
+  xy: 564, 113
+  size: 156, 137
+  orig: 250, 300
+  offset: 32, 79
+  index: -1
+skill_2/skill2_0005_250x300
+  rotate: true
+  xy: 1185, 209
+  size: 60, 95
+  orig: 250, 300
+  offset: 34, 123
+  index: -1
