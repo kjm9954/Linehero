@@ -44,7 +44,7 @@ public class InfinityPlayer: MonoBehaviour
             Debug.Log("Enemy");
             hp--;
             Damage();
-            Hit.GetComponent<Animation>().OnSkill();
+            //Hit.GetComponent<Animation>().OnSkill();
 
         }
     }

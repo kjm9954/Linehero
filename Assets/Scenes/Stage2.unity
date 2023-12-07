@@ -177,10 +177,6 @@ MonoBehaviour:
   - 3left
   - down
   - 3left
-  - 2up
-  - 3down
-  - 3right
-  - 3left
   width_x: 4
   width_y: 0.25
   height_x: 0
@@ -3723,7 +3719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 1a15d5eef2255d24087986e36ed45f46, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 8a2143a4fa488ac44adcaa970569b7a8, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0

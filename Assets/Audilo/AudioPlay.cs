@@ -6,6 +6,7 @@ public class AudioPlay : MonoBehaviour
 {
 
     public GameObject player;
+    public GameObject clear;
 
     public AudioSource audioSource;
 
@@ -18,10 +19,11 @@ public class AudioPlay : MonoBehaviour
             audioSource.clip = audioClip[1];
             audioSource.Play();
         }
-        else if (player.GetComponent<Player>().spn.AnimationName == "victory")
+        else if (clear.GetComponent<InGameManager>().MonsterNum == 0)
         {
             audioSource.clip = audioClip[0];
             audioSource.Play();
         }
+        
     }
 }

@@ -63,6 +63,8 @@ public class AttackBtn : MonoBehaviour
         {
             if(GameObject.FindWithTag("LeftEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<Enemy_Manager>().KillLeftMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
@@ -70,14 +72,20 @@ public class AttackBtn : MonoBehaviour
             {
                 if (Left.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageLeftMonster();
                 }
                 else if (Left.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageLeftMonster();
                 }
                 else if (Left.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().KillLeft2Monster();
                     Debug.Log("Hp 0");
                     InGame.GetComponent<InGameManager>().MonsterNum--;
@@ -90,6 +98,8 @@ public class AttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("RightEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<Enemy_Manager>().KillRightMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
@@ -97,14 +107,20 @@ public class AttackBtn : MonoBehaviour
             {
                 if (Right.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageRightMonster();
                 }
                 else if (Right.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageRightMonster();
                 }
                 else if (Right.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().KillRight2Monster();
                     Debug.Log("Hp 0");
                     InGame.GetComponent<InGameManager>().MonsterNum--;
@@ -116,6 +132,8 @@ public class AttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("UpEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<Enemy_Manager>().KillUpMonster();
                 InGame.GetComponent<InGameManager>().MonsterNum--;
             }
@@ -123,14 +141,20 @@ public class AttackBtn : MonoBehaviour
             {
                 if (Up.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageUpMonster();
                 }
                 else if (Up.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().DamageUpMonster();
                 }
                 else if (Up.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<Enemy_Manager>().KillUp2Monster();
                     Debug.Log("Hp 0");
                     InGame.GetComponent<InGameManager>().MonsterNum--;
