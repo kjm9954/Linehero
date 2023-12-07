@@ -3968,7 +3968,7 @@ MonoBehaviour:
       id: 8
   - tutorial:
       EventName: End
-      id: 10
+      id: 11
   wating: 10
 --- !u!1 &1959488648
 GameObject:
