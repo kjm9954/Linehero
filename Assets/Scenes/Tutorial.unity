@@ -1159,10 +1159,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4808030006016578641, guid: 651bbcc84c70c3947bee3ee03aa6ffb9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 30eac6a758f810646a3fd145f172a57d, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2890,8 +2890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5092e40c6c55314c99d5197fc2da1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClearTime: 2
-  FailedTime: 2
+  ClearTime: 3
+  FailedTime: 3
 --- !u!4 &1322814840
 Transform:
   m_ObjectHideFlags: 0
@@ -4354,7 +4354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 14e3394dfad849840ba134a11427cb81, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 8a2143a4fa488ac44adcaa970569b7a8, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -4399,7 +4399,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 269ab36ced7894141bd91d23feed2c7d, type: 2}
+  - {fileID: 2100000, guid: ce70c0fe5b2f933489a883ec391cb4ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainManager : BaseUi
 {
     public GameObject setting;
+
     protected override void Awake()
     {
         base.Awake();
@@ -40,6 +41,6 @@ public class MainManager : BaseUi
     }
     void Chage()
     {
-        SceneManager.LoadScene("Stage_Select");
+        SceneManager.LoadScene("CutScene");
     }
 }

@@ -1,0 +1,62 @@
+
+moster_1.png
+size: 181,635
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+몹1_body
+  rotate: false
+  xy: 2, 281
+  size: 170, 162
+  orig: 220, 300
+  offset: 24, 63
+  index: -1
+몹1_eye
+  rotate: true
+  xy: 95, 198
+  size: 81, 84
+  orig: 220, 300
+  offset: 69, 124
+  index: -1
+파란 몬스터/눈
+  rotate: false
+  xy: 95, 104
+  size: 65, 92
+  orig: 220, 300
+  offset: 70, 75
+  index: -1
+파란 몬스터/몸통
+  rotate: true
+  xy: 2, 445
+  size: 188, 167
+  orig: 220, 300
+  offset: 14, 43
+  index: -1
+파란 몬스터/사망액체
+  rotate: false
+  xy: 2, 2
+  size: 91, 277
+  orig: 220, 300
+  offset: 72, 13
+  index: -1
+파란 몬스터/점액3
+  rotate: true
+  xy: 162, 166
+  size: 30, 16
+  orig: 220, 300
+  offset: 91, 32
+  index: -1
+파란 몬스터/점액4
+  rotate: false
+  xy: 95, 20
+  size: 56, 36
+  orig: 220, 300
+  offset: 0, 23
+  index: -1
+파란 몬스터/주위점액1
+  rotate: false
+  xy: 95, 58
+  size: 77, 44
+  orig: 220, 300
+  offset: 139, 28
+  index: -1

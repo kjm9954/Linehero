@@ -24,12 +24,12 @@ public class SpineAnimation : MonoBehaviour
     }
     public void Attack()
     {
-        spn.AnimationState.SetAnimation(0, "attack", false);
+        spn.AnimationState.SetAnimation(0, "attack2", false);
     }
 
     void die()
     {
-        spn.AnimationState.SetAnimation(0, "attack", false);
+        spn.AnimationState.SetAnimation(0, "die", false);
     }
     public void Clear()
     {

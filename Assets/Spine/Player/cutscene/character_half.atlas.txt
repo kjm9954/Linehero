@@ -1,0 +1,118 @@
+
+character_half.png
+size: 634,142
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_모자/모자_1
+  rotate: false
+  xy: 473, 20
+  size: 78, 29
+  orig: 220, 300
+  offset: 31, 157
+  index: -1
+1_모자/모자_2
+  rotate: false
+  xy: 564, 54
+  size: 48, 21
+  orig: 220, 300
+  offset: 81, 164
+  index: -1
+1_모자/모자_3_마스크
+  rotate: false
+  xy: 553, 22
+  size: 79, 27
+  orig: 220, 300
+  offset: 30, 165
+  index: -1
+2_손/손_1_오른손
+  rotate: true
+  xy: 401, 7
+  size: 37, 34
+  orig: 220, 300
+  offset: 85, 105
+  index: -1
+2_손/손_2_왼손
+  rotate: true
+  xy: 437, 13
+  size: 36, 34
+  orig: 220, 300
+  offset: 63, 97
+  index: -1
+3_칼
+  rotate: false
+  xy: 402, 51
+  size: 160, 89
+  orig: 220, 300
+  offset: 59, 92
+  index: -1
+4_앞망토/망토_1_오른쪽
+  rotate: false
+  xy: 220, 45
+  size: 85, 95
+  orig: 220, 300
+  offset: 64, 97
+  index: -1
+4_앞망토/망토_2_왼쪽
+  rotate: false
+  xy: 307, 46
+  size: 93, 94
+  orig: 220, 300
+  offset: 10, 94
+  index: -1
+5_팔/팔_2_오른전완
+  rotate: false
+  xy: 370, 6
+  size: 29, 38
+  orig: 220, 300
+  offset: 87, 125
+  index: -1
+5_팔/팔_4_왼전완
+  rotate: true
+  xy: 220, 2
+  size: 41, 39
+  orig: 220, 300
+  offset: 46, 107
+  index: -1
+6_상체
+  rotate: true
+  xy: 564, 77
+  size: 63, 65
+  orig: 220, 300
+  offset: 46, 112
+  index: -1
+7_하체/하체_2_왼허벅지
+  rotate: false
+  xy: 320, 2
+  size: 48, 42
+  orig: 220, 300
+  offset: 40, 102
+  index: -1
+7_하체/하체_5_오른허벅지
+  rotate: false
+  xy: 261, 3
+  size: 57, 40
+  orig: 220, 300
+  offset: 57, 103
+  index: -1
+8_뒷망토
+  rotate: true
+  xy: 131, 8
+  size: 132, 87
+  orig: 220, 300
+  offset: 13, 83
+  index: -1
+캐릭터_크롭_정면
+  rotate: false
+  xy: 2, 5
+  size: 127, 135
+  orig: 127, 135
+  offset: 0, 0
+  index: -1
+캐릭터_크롭_정면_눈
+  rotate: false
+  xy: 473, 2
+  size: 48, 16
+  orig: 48, 16
+  offset: 0, 0
+  index: -1

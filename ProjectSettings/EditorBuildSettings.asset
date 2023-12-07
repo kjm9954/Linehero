@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage_Select.unity
     guid: 85efb8c169864a249ba9134f36076a0f
   - enabled: 1
+    path: Assets/Scenes/CutScene.unity
+    guid: 9f67e58ee9907394eaf96da9f31bc513
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 61cf48e652b73bf44bb6db2e46c33041
+  - enabled: 1
     path: Assets/Scenes/Stage1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
-    guid: fb510cd6d310fcc4ab326fd865bd0872
+    guid: d69bb06c7321bbb409424b0d3ff9bbfe
   m_configObjects:
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: c0e2a7a84eff62e438441f9336d6da19, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9ff0eeb11d68bf24d8c67b0627e6264b, type: 2}

@@ -122,7 +122,8 @@ public class Clipboard : MonoBehaviour
             }
             else if (_id == textevents[3].tutorial.id)
             {
-                SceneManager.LoadScene("Main");
+                GameData.StageNum = 2;
+                SceneManager.LoadScene("Stage_Select");
             }
         }
         StartMethod();

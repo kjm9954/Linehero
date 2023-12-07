@@ -29,13 +29,14 @@ public class StageManager : BaseUi
         switch(btnname)
         {
             case "Stage1":
-                Debug.Log("Stage1");
-                SceneManager.LoadScene("Stage1");
+                /*Debug.Log("Stage1")*/
+                SceneManager.LoadScene("Tutorial");
                 break;
             case "Stage2":
-                SceneManager.LoadScene("Stage2");
+                SceneManager.LoadScene("Stage1");
                 break;
             case "Stage3":
+                SceneManager.LoadScene("Stage2");
                 break;
                 
             case "Back":

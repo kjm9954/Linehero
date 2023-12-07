@@ -12,7 +12,7 @@ public class Stage_Clear : MonoBehaviour
         {
             if (GameData.StageNum == 1)
             {
-                GameData.StageNum = 2;
+                GameData.StageNum = 3;
             }
 
         }
@@ -20,7 +20,7 @@ public class Stage_Clear : MonoBehaviour
         {
             if (GameData.StageNum == 2)
             {
-                GameData.StageNum = 3;
+                GameData.StageNum = 4;
             }
         }
     }
