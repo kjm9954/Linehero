@@ -169,6 +169,7 @@ MonoBehaviour:
   - {fileID: 1151015974165054116, guid: 7b404934f9c4bb141b2452a85be3e7e8, type: 3}
   wating: 3
   spawnpoint:
+<<<<<<< Updated upstream
   - down
   - 2left
   - up
@@ -177,6 +178,11 @@ MonoBehaviour:
   width_y: 0.25
   height_x: 0
   height_y: 7.5
+=======
+  - 2down
+  - 3up
+  - left
+>>>>>>> Stashed changes
 --- !u!4 &92929383
 Transform:
   m_ObjectHideFlags: 0
