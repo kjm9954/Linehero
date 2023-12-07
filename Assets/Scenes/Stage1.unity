@@ -172,9 +172,7 @@ MonoBehaviour:
   - down
   - 2left
   - up
-  - 3right
-  - 2up
-  - down
+  - up
   width_x: 4
   width_y: 0.25
   height_x: 0
@@ -224,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2051031143}
+  clear: {fileID: 2010549462}
   audioSource: {fileID: 519420035}
   audioClip:
   - {fileID: 8300000, guid: 9aa991bf23fc4c54ea61f25757f81dc0, type: 3}
