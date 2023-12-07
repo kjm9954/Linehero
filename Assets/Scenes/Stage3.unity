@@ -174,6 +174,19 @@ MonoBehaviour:
   - up
   - 3right
   - 2up
+  - 3down
+  - 2left
+  - 3right
+  - 3left
+  - 3right
+  - 2up
+  - 3down
+  - 3up
+  - left
+  - 3right
+  - 2down
+  - 3up
+  - 2up
   width_x: 4
   width_y: 0.25
   height_x: 0
@@ -3182,7 +3195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1693979915
 Animator:
   serializedVersion: 5
@@ -3716,7 +3729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 14e3394dfad849840ba134a11427cb81, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 8a2143a4fa488ac44adcaa970569b7a8, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0

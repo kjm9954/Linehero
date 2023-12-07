@@ -179,8 +179,8 @@ MonoBehaviour:
   - 3left
   - 4up
   - 3down
-  - 4right
-  - 4left
+  - 3right
+  - 3left
   width_x: 4
   width_y: 0.25
   height_x: 0
