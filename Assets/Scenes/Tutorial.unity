@@ -3917,7 +3917,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 821dcf7054f4e0f4086e55b66dfa49d2, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -3965,10 +3965,10 @@ MonoBehaviour:
       id: 7
   - tutorial:
       EventName: GetDamage
-      id: 10
+      id: 8
   - tutorial:
       EventName: End
-      id: 13
+      id: 10
   wating: 10
 --- !u!1 &1959488648
 GameObject:
