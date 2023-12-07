@@ -10,7 +10,7 @@ public class Stage_Clear : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Stage1")
         {
-            if (GameData.StageNum == 1)
+            if (GameData.StageNum == 2)
             {
                 GameData.StageNum = 3;
             }
@@ -18,7 +18,7 @@ public class Stage_Clear : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Stage2")
         {
-            if (GameData.StageNum == 2)
+            if (GameData.StageNum == 3)
             {
                 GameData.StageNum = 4;
             }
