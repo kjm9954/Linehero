@@ -167,22 +167,16 @@ MonoBehaviour:
   - {fileID: 1397452104710247506, guid: 5a1136c9d0a9575448824e8a427d8a72, type: 3}
   - {fileID: 1151015974165054116, guid: 72a53f579fbbde04784ca67cc4901210, type: 3}
   - {fileID: 1151015974165054116, guid: 7b404934f9c4bb141b2452a85be3e7e8, type: 3}
-  wating: 3
+  wating: 2
   spawnpoint:
-<<<<<<< Updated upstream
   - down
-  - 2left
   - up
-  - up
+  - 3left
+  - down
   width_x: 4
   width_y: 0.25
   height_x: 0
   height_y: 7.5
-=======
-  - 2down
-  - 3up
-  - left
->>>>>>> Stashed changes
 --- !u!4 &92929383
 Transform:
   m_ObjectHideFlags: 0
@@ -228,7 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2051031143}
-  clear: {fileID: 2010549462}
   audioSource: {fileID: 519420035}
   audioClip:
   - {fileID: 8300000, guid: 9aa991bf23fc4c54ea61f25757f81dc0, type: 3}
@@ -650,7 +643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 220c524f9eb4bbf4aa6f73775b46dd95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20ea71af88ea42d4e92654db0c85a113, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -926,7 +919,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 4808030006016578641, guid: 651bbcc84c70c3947bee3ee03aa6ffb9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 30eac6a758f810646a3fd145f172a57d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.412
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1028,7 +1021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &539675781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1048,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539675782
@@ -1135,7 +1128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: 2.5}
+  m_AnchoredPosition: {x: -110, y: 2.5}
   m_SizeDelta: {x: 98, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810771049
@@ -1771,7 +1764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6755cf4c1c6d25b4a869f64717fdb2e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e68fd9fcba870e4888b00932bbb00c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1808,7 +1801,7 @@ MonoBehaviour:
   MonManager: {fileID: 92929381}
   InGame: {fileID: 2010549462}
   Clear: {fileID: 539675780}
-  skill: {fileID: 0}
+  skill: {fileID: 1693979914}
   Camera: {fileID: 519420028}
   spn: {fileID: 2051031143}
   resultime: {fileID: 1322814838}
@@ -2108,7 +2101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 2.5}
+  m_AnchoredPosition: {x: 110, y: 2.5}
   m_SizeDelta: {x: 98, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271573694
@@ -2287,7 +2280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1281467108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2307,7 +2300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281467109
@@ -3152,7 +3145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 97d066e63ef401140b74f0cacbba0794, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36180a484c85a3e47a4891b0470780c8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3922,6 +3915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a1830e04847e647aa1a720b050f584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vic: 0
 --- !u!82 &2051031152
 AudioSource:
   m_ObjectHideFlags: 0

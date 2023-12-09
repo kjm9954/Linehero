@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpineAnimation : MonoBehaviour
 {
     SkeletonAnimation spn;
+    public bool Vic = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class SpineAnimation : MonoBehaviour
     }
     public void Clear()
     {
+        Vic = true;
         spn.AnimationState.SetAnimation(1, "victory", false);
         spn.AnimationState.AddAnimation(2, "victory_after", false, 1f);
     }

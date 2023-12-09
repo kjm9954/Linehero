@@ -45,9 +45,6 @@ public class Player : MonoBehaviour
             Debug.Log("Enemy");
             hp--;
             Damage();
-            /*
-             Hit.GetComponent<Animation>().OnSkill();
-            */
             
         }
     }
@@ -58,10 +55,8 @@ public class Player : MonoBehaviour
         {
             Destroy(righthp.gameObject);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
-            if (gameObject.scene.name != "Infinity")
-                Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
-            random = UnityEngine.Random.Range(0, 2);
+            random = UnityEngine.Random.Range(0, 2); 
             AudioSource hit = GetComponent<AudioSource>();
             hit.clip = hit_audio[random];
             hit.Play();
@@ -71,8 +66,6 @@ public class Player : MonoBehaviour
         {
             Destroy(centerhp.gameObject);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
-            if (gameObject.scene.name != "Infinity")
-                Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
             random = UnityEngine.Random.Range(0, 2);
             AudioSource hit = GetComponent<AudioSource>();

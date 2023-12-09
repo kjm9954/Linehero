@@ -20,6 +20,6 @@ public class SetVolume : MonoBehaviour
         else mixer.SetFloat("BGM", sound);
 
         if (sound == -40f) mixer.SetFloat("SFX", -80);
-        else mixer.SetFloat("SFX", sound);
+        else mixer.SetFloat("SFX", SFXsound);
     }
 }

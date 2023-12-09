@@ -1,5 +1,4 @@
 using Spine.Unity;
-using System;
 using UnityEngine;
 
 public class Monster_Destroy : MonoBehaviour
@@ -8,6 +7,12 @@ public class Monster_Destroy : MonoBehaviour
     public int hp;
     [SerializeField] GameObject[] hp_;
     Enemy_Move move;
+    [SerializeField] private string move1;
+    [SerializeField] private string move2;
+    [SerializeField] private string death;
+    [SerializeField] private string side_attack;
+    [SerializeField] private string front_attack;
+    [SerializeField] private string back_attack;
 
     public SkeletonAnimation spn;
 
