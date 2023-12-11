@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
         {
             Destroy(righthp.gameObject);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
+            Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
             random = UnityEngine.Random.Range(0, 2); 
             AudioSource hit = GetComponent<AudioSource>();
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour
         {
             Destroy(centerhp.gameObject);
             Array.Resize(ref Monster.GetComponent<Enemy_Manager>().spawnpoint, Monster.GetComponent<Enemy_Manager>().spawnpoint.Length + 1);
+            Monster.GetComponent<Enemy_Manager>().randomMon();
             spn.AnimationState.SetAnimation(0, "hit", false);
             random = UnityEngine.Random.Range(0, 2);
             AudioSource hit = GetComponent<AudioSource>();

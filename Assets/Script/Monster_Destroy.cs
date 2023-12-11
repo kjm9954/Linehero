@@ -44,6 +44,7 @@ public class Monster_Destroy : MonoBehaviour
                 if (spn.AnimationName == "M1_move")
                 {
                     spn.AnimationState.SetAnimation(0, "M1_death", false);
+                    gameObject.GetComponent<CircleCollider2D>().enabled = false;
                     Invoke("Death", 1.3f);
                 }
                 else if (spn.AnimationName == "M2_move_front" ||

@@ -28,27 +28,78 @@ public class InfinityStage : MonoBehaviour
 
     protected void SpawnUp()
     {
-        upenemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, height_y, 1f), Quaternion.identity);
-        upenemy.tag = "UpEnemy";
-        Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
+        int randomHp = Random.Range(0, 3);
+        if (randomHp == 0) 
+        {
+            upenemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, height_y, 1f), Quaternion.identity);
+            upenemy.tag = "UpEnemy";
+            Rigidbody2D rb = upenemy.GetComponent<Rigidbody2D>();
+        }
+        else if (randomHp == 1) 
+        {
+            SpawnUp_2Hp();
+        }
+        else if (randomHp == 2) 
+        {
+            SpawnUp_3Hp();
+        }
     }
     protected void SpawnDown()
     {
-        enemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, -height_y, 1f), Quaternion.identity);
-        enemy.tag = "DownEnemy";
-        Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+        int randomHp = Random.Range(0, 3);
+        if (randomHp == 0)
+        {
+            enemy = (GameObject)Instantiate(Enemy[random], new Vector3(height_x, -height_y, 1f), Quaternion.identity);
+            enemy.tag = "DownEnemy";
+            Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+        }
+        else if (randomHp == 1)
+        {
+            SpawnDown_2Hp();
+        }
+        else if (randomHp == 2)
+        {
+            SpawnDown_3Hp();
+        }
+
     }
     protected void SpawnLeft()
     {
-        leftenemy = (GameObject)Instantiate(Enemy[random], new Vector3(-width_x, width_y, 1f), Quaternion.identity);
-        leftenemy.tag = "LeftEnemy";
-        Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
+        int randomHp = Random.Range(0, 3);
+        if (randomHp == 0)
+        {
+            leftenemy = (GameObject)Instantiate(Enemy[random], new Vector3(-width_x, width_y, 1f), Quaternion.identity);
+            leftenemy.tag = "LeftEnemy";
+            Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
+        }
+        else if (randomHp == 1)
+        {
+            SpawnLeft_2Hp();
+        }
+        else if (randomHp == 2)
+        {
+            SpawnLeft_3Hp();
+        }
+
     }
     protected void SpawnRight()
     {
-        rightenemy = (GameObject)Instantiate(Enemy[random], new Vector3(width_x, width_y, 1f), Quaternion.identity);
-        rightenemy.tag = "RightEnemy";
-        Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
+        int randomHp = Random.Range(0, 3);
+        if (randomHp == 0)
+        {
+            rightenemy = (GameObject)Instantiate(Enemy[random], new Vector3(width_x, width_y, 1f), Quaternion.identity);
+            rightenemy.tag = "RightEnemy";
+            Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
+        }
+        else if (randomHp == 1)
+        {
+            SpawnRight_2Hp();
+        }
+        else if (randomHp == 2)
+        {
+            SpawnRight_3Hp();
+        }
+
     }
     protected void SpawnUp_2Hp()
     {
