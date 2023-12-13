@@ -7,7 +7,7 @@ public class InfinityInGame: BaseUi
     public GameObject AttackButton;
     public GameObject Monster;
     public GameObject Over;
-    public GameObject Clear;
+    public Stop stop;
     public float MonsterNum;
     public float MonsterLength;
 
@@ -24,7 +24,7 @@ public class InfinityInGame: BaseUi
     }
     private void Update()
     {
-        imgs[0].fillAmount = MonsterNum / MonsterLength;
+        //imgs[0].fillAmount = MonsterNum / MonsterLength;
     }
 
     protected override void ButtonFuncion(string btnname)
@@ -42,32 +42,34 @@ public class InfinityInGame: BaseUi
                 {
                     Time.timeScale = 1f;
                     Debug.Log("Retry");
-                    Over.GetComponent<GameOver>().OnClick_Retry();
+                    Over.GetComponent<GameOver>().Click_Infinity();
 
-                }
-                break;
-            case "Clear_Retry":
-                {
-                    Time.timeScale = 1f;
-                    Debug.Log("Retry");
-                    Clear.GetComponent<GameClear>().OnClick_Retry();
                 }
                 break;
             case "Over_Back":
                 {
-                    Over.GetComponent<GameOver>().OnClick_Back();
+                    Time.timeScale = 1f;
+                    Over.GetComponent<GameOver>().Click_Infinity_Main();
                 }
                 break;
-            case "Clear_Back":
+            case "Stop":
                 {
-                    Clear.GetComponent<GameClear>().OnClick_Back();
+                    stop.OnInter();
+                }
+                break;
+            case "Continue":
+                {
+                    stop.OffInter();
+                }
+                break;
+            case "Back":
+                {
+                    Time.timeScale = 1f;
+                    Over.GetComponent<GameOver>().Click_Infinity_Main();
                 }
                 break;
         }
     }
 
-    protected void MonsterBar()
-    {
-
-    }
+    
 }

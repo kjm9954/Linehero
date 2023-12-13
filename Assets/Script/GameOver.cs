@@ -24,7 +24,15 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Stage1");
     }
+    public void Click_Infinity()
+    {
+        SceneManager.LoadScene("Infinity");
+    }
 
+    public void Click_Infinity_Main()
+    {
+        SceneManager.LoadScene("Infinity_Main");
+    }
     public void OnClick_Back()
     {
         SceneManager.LoadScene("Stage_Select");

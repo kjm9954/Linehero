@@ -5,14 +5,20 @@ public class Monster_Destroy : MonoBehaviour
 {
     // Start is called before the first frame update
     public int hp;
+    int death = 0;
+    int getdamege = 0;
     [SerializeField] GameObject[] hp_;
     Enemy_Move move;
-    [SerializeField] private string move1;
-    [SerializeField] private string move2;
-    [SerializeField] private string death;
+    [SerializeField] private string move_front;
+    [SerializeField] private string move_back;
+    [SerializeField] private string death_front;
+    [SerializeField] private string death_back;
     [SerializeField] private string side_attack;
     [SerializeField] private string front_attack;
     [SerializeField] private string back_attack;
+    [SerializeField] private string damage_front;
+    [SerializeField] private string damage_back;
+    [SerializeField] private string damage_side;
 
     public SkeletonAnimation spn;
 
@@ -26,32 +32,59 @@ public class Monster_Destroy : MonoBehaviour
         if (hp == 2)
         {
             if (hp_.Length == 3)
-            Destroy(hp_[2]);
+            {
+                Destroy(hp_[2]);
+
+            }
+
         }
         else if (hp == 1)
         {
             if (hp_.Length >= 2)
-            Destroy(hp_[1]);
-            
+            {
+                Destroy(hp_[1]);
+
+            }
+
         }
         else if (hp == 0)
         {
             Destroy(hp_[0]);
             move.dir.x = 0;
             move.dir.y = 0;
+            if (death == 0)
+            {
+                death = 1;
+            }
+
             if (spn != null)
             {
-                if (spn.AnimationName == "M1_move")
+                if (death_back != null)
                 {
-                    spn.AnimationState.SetAnimation(0, "M1_death", false);
-                    gameObject.GetComponent<CircleCollider2D>().enabled = false;
-                    Invoke("Death", 1.3f);
+                    if (gameObject.CompareTag("DownEnemy") || gameObject.CompareTag("DownEnemy2"))
+                    {
+                        if (death == 1)
+                        {
+                            spn.AnimationState.SetAnimation(0, death_back, false);
+                            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                            death++;
+                        }
+
+                        Invoke("Death", 1.3f);
+                    }
+                    else
+                    {
+                        if (death == 1)
+                        {
+                            spn.AnimationState.SetAnimation(0, death_front, false);
+                            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                            death++;
+                        }
+
+                        Invoke("Death", 1.3f);
+                    }
                 }
-                else if (spn.AnimationName == "M2_move_front" ||
-                    spn.AnimationName == "M2_move_back")
-                {
-                    Death();
-                }
+
             }
 
             else if(spn == null)
@@ -68,41 +101,20 @@ public class Monster_Destroy : MonoBehaviour
             move.GetComponent<Enemy_Move>().MonStop();
             if (spn != null)
             {
-                if (spn.AnimationName == "M1_move")
+                if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
+                    || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
                 {
-                    if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
-                        || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
-                    {
-                        spn.AnimationState.SetAnimation(0, "M1_attack_side", false);
-                    }
-                    else if (gameObject.CompareTag("UpEnemy"))
-                    {
-                        spn.AnimationState.SetAnimation(0, "M1_attack_front", false);
-                    }
-                    else if (gameObject.CompareTag("DownEnemy"))
-                    {
-                        spn.AnimationState.SetAnimation(0, "M1_attack_back", false);
-                    }
-                    Invoke("Death", 0.8f);
+                    spn.AnimationState.SetAnimation(0, side_attack, false);
                 }
-                else if (spn.AnimationName == "M2_move_front" ||
-                        spn.AnimationName == "M2_move_back")
+                else if (gameObject.CompareTag("UpEnemy") || gameObject.CompareTag("UpEnemy2"))
                 {
-                    if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
-                        || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
-                    {
-                        spn.AnimationState.SetAnimation(0, "M2_attack_side", false);
-                    }
-                    else if (gameObject.CompareTag("UpEnemy"))
-                    {
-                        spn.AnimationState.SetAnimation(0, "M2_attack_front", false);
-                    }
-                    else if (gameObject.CompareTag("DownEnemy"))
-                    {
-                        spn.AnimationState.SetAnimation(0, "M2_attack_back", false);
-                    }
-                    Invoke("Death", 0.8f);
+                    spn.AnimationState.SetAnimation(0, front_attack, false);
                 }
+                else if (gameObject.CompareTag("DownEnemy") || gameObject.CompareTag("DownEnemy2"))
+                {
+                    spn.AnimationState.SetAnimation(0, back_attack, false);
+                }
+                Invoke("Death", 0.8f);
             }
             else
                 Invoke("Death", 0.8f);
@@ -113,4 +125,28 @@ public class Monster_Destroy : MonoBehaviour
     {
        Destroy (gameObject);
     }
+
+    void Idle()
+    {
+        if (spn != null)
+        {
+            if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
+                || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
+            {
+                spn.AnimationState.SetAnimation(0, move_front, false);
+                spn.timeScale = 1f;
+            }
+            else if (gameObject.CompareTag("UpEnemy") || gameObject.CompareTag("UpEnemy2"))
+            {
+                spn.AnimationState.SetAnimation(0, move_front, false);
+                spn.timeScale = 1f;
+            }
+            else if (gameObject.CompareTag("DownEnemy") || gameObject.CompareTag("DownEnemy2"))
+            {
+                spn.AnimationState.SetAnimation(0, move_back, false);
+                spn.timeScale = 1f;
+            }
+        }
+    }
 }
+

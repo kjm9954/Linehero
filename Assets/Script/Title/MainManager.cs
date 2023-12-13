@@ -37,10 +37,37 @@ public class MainManager : BaseUi
                     Application.Quit();
                 }
                 break;
+            case "Infinity_Start":
+                {
+                    Invoke("Infinity", 0.3f);
+                }
+                break;
+            case "In_Start":
+                {
+                    Invoke("InfinityStart", 0.3f);
+                }
+                break;
+            case "Back":
+                {
+                    Invoke("Main", 0.3f);
+                }
+                break;
         }
     }
     void Chage()
     {
         SceneManager.LoadScene("CutScene");
+    }
+    void Infinity()
+    {
+        SceneManager.LoadScene("Infinity_Main");
+    }
+    void InfinityStart()
+    {
+        SceneManager.LoadScene("Infinity");
+    }
+    void Main()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

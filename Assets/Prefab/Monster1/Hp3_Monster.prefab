@@ -145,6 +145,16 @@ MonoBehaviour:
   - {fileID: 4418007084158240508}
   - {fileID: 6216959034957192041}
   - {fileID: 4126763246555045916}
+  move_front: M1_move
+  move_back: 
+  death_front: M1_death
+  death_back: 
+  side_attack: M1_attack_side
+  front_attack: M1_attack_front
+  back_attack: M1_attack_back
+  damage_front: 
+  damage_back: 
+  damage_side: 
   spn: {fileID: 6273084363948746193}
 --- !u!114 &447304943167572022
 MonoBehaviour:

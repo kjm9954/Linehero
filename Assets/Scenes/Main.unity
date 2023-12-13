@@ -361,8 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 651bbcc84c70c3947bee3ee03aa6ffb9, type: 2}
-  slider: {fileID: 335199832}
-  SFX: {fileID: 0}
+  slider: {fileID: 1735911002}
+  SFX: {fileID: 335199832}
 --- !u!114 &335199832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,6 +758,7 @@ MonoBehaviour:
   - {fileID: 1297546339}
   - {fileID: 2113976007}
   - {fileID: 687870799}
+  - {fileID: 1167239864}
   setting: {fileID: 820084771}
 --- !u!4 &667321300
 Transform:
@@ -1569,7 +1570,7 @@ GameObject:
   - component: {fileID: 1167239864}
   - component: {fileID: 1167239863}
   m_Layer: 5
-  m_Name: Infinity Start
+  m_Name: Infinity_Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

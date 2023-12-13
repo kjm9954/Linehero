@@ -10,13 +10,13 @@ public class InfinityAttackBtn : MonoBehaviour
     public GameObject downline;
     public GameObject MonManager;
     public GameObject InGame;
-    public GameObject Clear;
     public GameObject skill;
     public GameObject Camera;
     public GameObject spn;
     public GameObject resultime;
     public GameObject Stage;
     public GameObject Back;
+    public GameObject score;
     public float wating = 0;
     int random;
     public AudioClip[] attack_audio;
@@ -32,6 +32,7 @@ public class InfinityAttackBtn : MonoBehaviour
     {
         _image = GetComponent<Image>();
         _color = GetComponent<Image>().color;
+        
 
     }
     private void Update()
@@ -60,24 +61,32 @@ public class InfinityAttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("LeftEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<InfinityStage>().KillLeftMonster();
-                InGame.GetComponent<InfinityInGame>().MonsterNum--;
+                score.GetComponent<MonsterScore>().AddScore();
             }
             else if (GameObject.FindWithTag("LeftEnemy2"))
             {
                 if (Left.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageLeftMonster();
                 }
                 else if (Left.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageLeftMonster();
                 }
                 else if (Left.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().KillLeft2Monster();
+                    score.GetComponent<MonsterScore>().AddScore();
                     Debug.Log("Hp 0");
-                    InGame.GetComponent<InfinityInGame>().MonsterNum--;
                 }
             }
             attck();
@@ -86,24 +95,32 @@ public class InfinityAttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("RightEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<InfinityStage>().KillRightMonster();
-                InGame.GetComponent<InfinityInGame>().MonsterNum--;
+                score.GetComponent<MonsterScore>().AddScore();
             }
             else if (GameObject.FindWithTag("RightEnemy2"))
             {
                 if (Right.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageRightMonster();
                 }
                 else if (Right.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageRightMonster();
                 }
                 else if (Right.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().KillRight2Monster();
+                    score.GetComponent<MonsterScore>().AddScore();
                     Debug.Log("Hp 0");
-                    InGame.GetComponent<InfinityInGame>().MonsterNum--;
                 }
             }
             attck();
@@ -112,24 +129,32 @@ public class InfinityAttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("UpEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<InfinityStage>().KillUpMonster();
-                InGame.GetComponent<InfinityInGame>().MonsterNum--;
+                score.GetComponent<MonsterScore>().AddScore();
             }
             else if (GameObject.FindWithTag("UpEnemy2"))
             {
                 if (Up.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageUpMonster();
                 }
                 else if (Up.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageUpMonster();
                 }
                 else if (Up.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().KillUp2Monster();
+                    score.GetComponent<MonsterScore>().AddScore();
                     Debug.Log("Hp 0");
-                    InGame.GetComponent<InfinityInGame>().MonsterNum--;
                 }
             }
             attck();
@@ -138,34 +163,37 @@ public class InfinityAttackBtn : MonoBehaviour
         {
             if (GameObject.FindWithTag("DownEnemy"))
             {
+                Camera.GetComponent<CameraShake>().m_force = 2;
+                Camera.GetComponent<CameraShake>().C_Shake();
                 MonManager.GetComponent<InfinityStage>().KillDownMonster();
-                InGame.GetComponent<InfinityInGame>().MonsterNum--;
+                score.GetComponent<MonsterScore>().AddScore();
             }
             else if (GameObject.FindWithTag("DownEnemy2"))
             {
                 if (Down.GetComponent<Monster_Destroy>().hp == 3)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 8;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageDownMonster();
                 }
                 else if (Down.GetComponent<Monster_Destroy>().hp == 2)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 4;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().DamageDownMonster();
                 }
                 else if (Down.GetComponent<Monster_Destroy>().hp == 1)
                 {
+                    Camera.GetComponent<CameraShake>().m_force = 2;
+                    Camera.GetComponent<CameraShake>().C_Shake();
                     MonManager.GetComponent<InfinityStage>().KillDown2Monster();
+                    score.GetComponent<MonsterScore>().AddScore();
                     Debug.Log("Hp 0");
-                    InGame.GetComponent<InfinityInGame>().MonsterNum--;
                 }
             }
             attck();
         }
         Btn_count++;
-    }
-
-    void ClearStage()
-    {
-        Clear.GetComponent<GameClear>().show();
     }
     public void OnBtn()
     {
@@ -179,7 +207,6 @@ public class InfinityAttackBtn : MonoBehaviour
     {
         spn.GetComponent<SpineAnimation>().Attack();
         Invoke("Idle", 0.6f);
-        //skill.GetComponent<Animation>().OnSkill();
         random = Random.Range(0, 2);
         AudioSource attack = GetComponent<AudioSource>();
         attack.clip = attack_audio[random];
@@ -194,7 +221,6 @@ public class InfinityAttackBtn : MonoBehaviour
     {
         if (InGame.GetComponent<InfinityInGame>().MonsterNum == 0)
         {
-            spn.GetComponent<SpineAnimation>().Clear();
             Back.GetComponent<Fade>().ShowBack();
             Stage.GetComponent<Stage_Clear>().Stage();
             Invoke("ClearStage", resultime.GetComponent<Result>().ClearTime);

@@ -70,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 971606713d0c95248b88d1e8beb3b26f, type: 2}
+  - {fileID: 2100000, guid: f31afe7ee5d67ec4791daeebf117a42f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,6 +163,16 @@ MonoBehaviour:
   - {fileID: 4604061364014182139}
   - {fileID: 4794786150310296581}
   - {fileID: 6006831131187376147}
+  move_front: M2_move_front
+  move_back: M2_move_back
+  death_front: M2_death_front
+  death_back: M2_death_back
+  side_attack: M2_attack_side
+  front_attack: M2_attack_front
+  back_attack: M2_attack_back
+  damage_front: M2_Damages_front
+  damage_back: M2_Damages_back
+  damage_side: M2_Damages_side
   spn: {fileID: 2027546490565279751}
 --- !u!58 &6110061774577903942
 CircleCollider2D:
