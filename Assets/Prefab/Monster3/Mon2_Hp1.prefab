@@ -159,6 +159,7 @@ MonoBehaviour:
   hp_:
   - {fileID: 4604061364014182139}
   move_front: M3_move_front
+  move_side: M3_move_side
   move_back: M3_move_back
   death_front: M3_death_front
   death_back: M3_death_back
