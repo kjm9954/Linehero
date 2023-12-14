@@ -28,6 +28,7 @@ public class InfinityStage : MonoBehaviour
 
     protected void SpawnUp()
     {
+        random = Random.Range(0, 4);
         int randomHp = Random.Range(0, 3);
         if (randomHp == 0) 
         {
@@ -46,6 +47,7 @@ public class InfinityStage : MonoBehaviour
     }
     protected void SpawnDown()
     {
+        random = Random.Range(0, 4);
         int randomHp = Random.Range(0, 3);
         if (randomHp == 0)
         {
@@ -68,6 +70,7 @@ public class InfinityStage : MonoBehaviour
         int randomHp = Random.Range(0, 3);
         if (randomHp == 0)
         {
+            random = Random.Range(0, 4);
             leftenemy = (GameObject)Instantiate(Enemy[random], new Vector3(-width_x, width_y, 1f), Quaternion.identity);
             leftenemy.tag = "LeftEnemy";
             Rigidbody2D rb = leftenemy.GetComponent<Rigidbody2D>();
@@ -87,6 +90,7 @@ public class InfinityStage : MonoBehaviour
         int randomHp = Random.Range(0, 3);
         if (randomHp == 0)
         {
+            random = Random.Range(0, 4);
             rightenemy = (GameObject)Instantiate(Enemy[random], new Vector3(width_x, width_y, 1f), Quaternion.identity);
             rightenemy.tag = "RightEnemy";
             Rigidbody2D rb = rightenemy.GetComponent<Rigidbody2D>();
@@ -179,6 +183,7 @@ public class InfinityStage : MonoBehaviour
     {
         if (time >= wating)
         {
+  
             SpawnUp();
             SpawnRight();
             SpawnDown();
@@ -227,7 +232,6 @@ public class InfinityStage : MonoBehaviour
     {
         if (time >= wating)
         {
-            random = Random.Range(0, 4);
             switch (pattern3[i])
             {
                 case "up":
@@ -262,7 +266,6 @@ public class InfinityStage : MonoBehaviour
     {
         if (time >= wating)
         {
-            random = Random.Range(0, 4);
             switch (pattern4[i])
             {
                 case "up":
