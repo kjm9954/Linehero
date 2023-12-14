@@ -222,7 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2051031143}
-  clear: {fileID: 0}
   audioSource: {fileID: 519420035}
   audioClip:
   - {fileID: 8300000, guid: 9aa991bf23fc4c54ea61f25757f81dc0, type: 3}
@@ -1075,7 +1074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &539675781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2456,7 +2455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1281467108
 RectTransform:
   m_ObjectHideFlags: 0
