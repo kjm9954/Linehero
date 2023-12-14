@@ -1,0 +1,90 @@
+
+moster_3.png
+size: 925,186
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+문홍 몬스터 사망/사망 불
+  rotate: false
+  xy: 413, 2
+  size: 164, 182
+  orig: 230, 230
+  offset: 18, 0
+  index: -1
+분홍 몬스터 공격/눈
+  rotate: true
+  xy: 879, 148
+  size: 36, 33
+  orig: 230, 230
+  offset: 167, 93
+  index: -1
+분홍 몬스터 공격/눈1
+  rotate: false
+  xy: 777, 130
+  size: 100, 54
+  orig: 230, 230
+  offset: 71, 97
+  index: -1
+분홍 몬스터 공격/머리
+  rotate: true
+  xy: 695, 103
+  size: 81, 80
+  orig: 230, 230
+  offset: 139, 52
+  index: -1
+분홍 몬스터 공격/몸1
+  rotate: true
+  xy: 234, 4
+  size: 180, 177
+  orig: 230, 230
+  offset: 30, 33
+  index: -1
+분홍 몬스터 공격/바디 1
+  rotate: false
+  xy: 2, 28
+  size: 230, 156
+  orig: 230, 230
+  offset: 0, 33
+  index: -1
+분홍 몬스터 공격/바디2
+  rotate: true
+  xy: 579, 6
+  size: 178, 114
+  orig: 230, 230
+  offset: 41, 46
+  index: -1
+분홍 몬스터 공격/바디3
+  rotate: true
+  xy: 695, 7
+  size: 94, 63
+  orig: 230, 230
+  offset: 92, 74
+  index: -1
+분홍 몬스터 공격/입
+  rotate: true
+  xy: 875, 61
+  size: 67, 48
+  orig: 230, 230
+  offset: 149, 55
+  index: -1
+분홍 몬스터 공격/입 (2)
+  rotate: true
+  xy: 819, 58
+  size: 70, 54
+  orig: 230, 230
+  offset: 76, 56
+  index: -1
+분홍 몬스터 피격 얼굴/피격 정면 눈
+  rotate: true
+  xy: 760, 2
+  size: 99, 57
+  orig: 230, 230
+  offset: 70, 92
+  index: -1
+분홍 몬스터 피격 얼굴/피격 정면 입
+  rotate: false
+  xy: 819, 2
+  size: 70, 54
+  orig: 230, 230
+  offset: 78, 57
+  index: -1

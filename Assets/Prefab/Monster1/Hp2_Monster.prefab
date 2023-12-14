@@ -172,7 +172,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6273084363948746193
 MonoBehaviour:
@@ -228,9 +228,10 @@ MonoBehaviour:
   - {fileID: 4418007084158240508}
   - {fileID: 725177349921857873}
   move_front: M1_move
-  move_back: 
+  move_side: M1_move
+  move_back: M1_move
   death_front: M1_death
-  death_back: 
+  death_back: M1_death
   side_attack: M1_attack_side
   front_attack: M1_attack_front
   back_attack: M1_attack_back

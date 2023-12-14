@@ -88,7 +88,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2027546490565279751
 MonoBehaviour:
@@ -160,7 +160,8 @@ MonoBehaviour:
   hp_:
   - {fileID: 4604061364014182139}
   move_front: M2_move_front
-  move_back: M2_move_back M2_move_front
+  move_side: M2_move_front
+  move_back: M2_move_back
   death_front: M2_death_front
   death_back: M2_death_back
   side_attack: M2_attack_side
@@ -318,7 +319,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3c5770855c9fa4b4dbcb200220111299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

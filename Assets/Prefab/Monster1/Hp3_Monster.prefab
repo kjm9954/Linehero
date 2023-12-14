@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0df14b060d707e34bacb0d0a70bb3d1b, type: 2}
+  - {fileID: 2100000, guid: af91b4712f942e642870e212b03d739e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,7 +89,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6273084363948746193
 MonoBehaviour:
@@ -146,9 +146,10 @@ MonoBehaviour:
   - {fileID: 6216959034957192041}
   - {fileID: 4126763246555045916}
   move_front: M1_move
-  move_back: 
+  move_side: M1_move
+  move_back: M1_move
   death_front: M1_death
-  death_back: 
+  death_back: M1_death
   side_attack: M1_attack_side
   front_attack: M1_attack_front
   back_attack: M1_attack_back

@@ -10,6 +10,7 @@ public class Monster_Destroy : MonoBehaviour
     [SerializeField] GameObject[] hp_;
     Enemy_Move move;
     [SerializeField] private string move_front;
+    [SerializeField] private string move_side;
     [SerializeField] private string move_back;
     [SerializeField] private string death_front;
     [SerializeField] private string death_back;
@@ -133,7 +134,7 @@ public class Monster_Destroy : MonoBehaviour
             if (gameObject.CompareTag("LeftEnemy") || gameObject.CompareTag("LeftEnemy2")
                 || gameObject.CompareTag("RightEnemy") || gameObject.CompareTag("RightEnemy2"))
             {
-                spn.AnimationState.SetAnimation(0, move_front, false);
+                spn.AnimationState.SetAnimation(0, move_side, false);
                 spn.timeScale = 1f;
             }
             else if (gameObject.CompareTag("UpEnemy") || gameObject.CompareTag("UpEnemy2"))

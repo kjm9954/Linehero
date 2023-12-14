@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5718b408ae5cc9841888c3e262bdd7ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,6 +121,16 @@ MonoBehaviour:
   hp: 1
   hp_:
   - {fileID: 9063061209918141862}
+  move_front: 
+  move_back: 
+  death_front: 
+  death_back: 
+  side_attack: 
+  front_attack: 
+  back_attack: 
+  damage_front: 
+  damage_back: 
+  damage_side: 
   spn: {fileID: 0}
 --- !u!50 &1559180836866979411
 Rigidbody2D:
