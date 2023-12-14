@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8912284191705363675}
   - component: {fileID: 3871047397297678329}
   - component: {fileID: 3267885337455509178}
+  - component: {fileID: -2049535993160454765}
   m_Layer: 0
   m_Name: Mon3_Hp2
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 373122838904469949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.01, y: -1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -124,8 +125,8 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
-  loop: 0
+  _animationName: M3_move_front
+  loop: 1
   timeScale: 1
 --- !u!114 &9147262526094923154
 MonoBehaviour:
@@ -147,7 +148,7 @@ MonoBehaviour:
   move_side: M3_move_side
   move_back: M3_move_back
   death_front: M3_death_front
-  death_back: M3_death_fr
+  death_back: M3_death_back
   side_attack: M3_attack_side
   front_attack: M3_attack_front
   back_attack: M3_attack_back
@@ -169,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: {fileID: 373122838904469949}
   Hit: 0
-  speed: 0.5
+  speed: 1.5
   dir: {x: 0, y: 0, z: 0}
   animation_speed: 0
 --- !u!50 &3871047397297678329
@@ -180,7 +181,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373122838904469949}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -233,7 +234,21 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1.2447904}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.7
+--- !u!114 &-2049535993160454765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373122838904469949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972f5bad8d6585948be3d76f43d9e896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spn: {fileID: 1107154129874208673}
+  move: {fileID: 373122838904469949}
 --- !u!1 &5435986333744999266
 GameObject:
   m_ObjectHideFlags: 0

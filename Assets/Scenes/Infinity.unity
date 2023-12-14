@@ -660,8 +660,8 @@ MonoBehaviour:
   - {fileID: 1397452104710247506, guid: 5a1136c9d0a9575448824e8a427d8a72, type: 3}
   - {fileID: 373122838904469949, guid: 622cdc1fa1a67cc4ca8f85f3f7f666fe, type: 3}
   - {fileID: 1151015974165054116, guid: 7b404934f9c4bb141b2452a85be3e7e8, type: 3}
-  wating: 3
-  nexttime: 3
+  wating: 2
+  nexttime: 2
   pattern2:
   - up
   - left
