@@ -155,17 +155,17 @@ MonoBehaviour:
   Enemy:
   - {fileID: 1774807850293785322, guid: 2d7a5e741a548c146b4da460c2f81e3c, type: 3}
   - {fileID: 1397452104710247506, guid: 4afd0d7ec16be194192960c796425851, type: 3}
-  - {fileID: 1151015974165054116, guid: e62d15cf324f15f43915ed0bf840194e, type: 3}
+  - {fileID: 373122838904469949, guid: 605d9c94c04cf764ab4c11474f9866c8, type: 3}
   - {fileID: 1151015974165054116, guid: c138ff79b0e684b438fccf15c47aac25, type: 3}
   Enemy_2Hp:
   - {fileID: 1774807850293785322, guid: 3abfeeb525316f645bcb51bfc9f087fb, type: 3}
   - {fileID: 1397452104710247506, guid: bdf8d1fc19722904b94c9ea996f1aa85, type: 3}
-  - {fileID: 1151015974165054116, guid: 5774d9196212dfa4babac544c72c8d73, type: 3}
+  - {fileID: 373122838904469949, guid: 1a26e828753bc7641947e9c26af13cfc, type: 3}
   - {fileID: 1151015974165054116, guid: f7c74ee1eff281140af970f2076988f1, type: 3}
   Enemy_3Hp:
   - {fileID: 1774807850293785322, guid: 82ddc17a9d2b76d4fa8b1e051cab5e09, type: 3}
   - {fileID: 1397452104710247506, guid: 5a1136c9d0a9575448824e8a427d8a72, type: 3}
-  - {fileID: 1151015974165054116, guid: 72a53f579fbbde04784ca67cc4901210, type: 3}
+  - {fileID: 373122838904469949, guid: 622cdc1fa1a67cc4ca8f85f3f7f666fe, type: 3}
   - {fileID: 1151015974165054116, guid: 7b404934f9c4bb141b2452a85be3e7e8, type: 3}
   wating: 2
   spawnpoint:
@@ -222,7 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2051031143}
-  clear: {fileID: 0}
   audioSource: {fileID: 519420035}
   audioClip:
   - {fileID: 8300000, guid: 9aa991bf23fc4c54ea61f25757f81dc0, type: 3}

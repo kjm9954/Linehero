@@ -146,9 +146,10 @@ MonoBehaviour:
   - {fileID: 6216959034957192041}
   - {fileID: 4126763246555045916}
   move_front: M1_move
-  move_back: 
+  move_side: M1_move
+  move_back: M1_move
   death_front: M1_death
-  death_back: 
+  death_back: M1_death
   side_attack: M1_attack_side
   front_attack: M1_attack_front
   back_attack: M1_attack_back
